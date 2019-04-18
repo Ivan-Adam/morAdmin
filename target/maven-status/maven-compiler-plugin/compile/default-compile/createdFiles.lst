@@ -1,0 +1,9 @@
+com\webapp\lay\mor\dao\IUserDao.class
+com\webapp\lay\mor\entity\User.class
+com\webapp\lay\mor\servlets\MainServlet.class
+com\webapp\lay\mor\servlets\LoginServlet.class
+com\webapp\lay\mor\dao\IBC.class
+com\webapp\lay\mor\dao\impl\BC.class
+com\webapp\lay\mor\service\UserService.class
+com\webapp\lay\mor\servlets\CaptcheServlet.class
+com\webapp\lay\mor\dao\impl\UserDao.class
