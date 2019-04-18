@@ -6,26 +6,32 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+    request.setAttribute("path", basePath);
+%>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>后台管理 - morAdmin 1.0.0</title>
+    <title>后台管理 - morAdmin 1.0</title>
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <link rel="shortcut icon" href="../images/fly.png" type="image/x-icon" />
-    <link rel="stylesheet" href="../css/font.css">
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../layui-v2.4.5/layui/css/layui.css">
-    <script type="text/javascript" src="../layui-v2.4.5/layui/layui.js" charset="utf-8"></script>
+    <link rel="shortcut icon" href="${bassPath}images/fly.png" type="image/x-icon" />
+    <link rel="stylesheet" href="${bassPath}css/font.css">
+    <link rel="stylesheet" href="${bassPath}css/index.css">
+    <script src="${bassPath}layui-v2.4.5/layui/layui.js" charset="utf-8"></script>
+    <%--<script src="${bassPath}js/index.js" charset="utf-8"></script>--%>
 </head>
-
 <body>
 <!-- 顶部开始 -->
 <div class="container">
     <div class="logo">
-        <a href="./index.html">WeAdmin v1.0</a>
+        <a href="./index.jsp">morAdmin 1.0</a>
     </div>
     <div class="left_open">
         <i title="展开左侧栏" class="iconfont">&#xe699;</i>
@@ -49,7 +55,7 @@
     </ul>
     <ul class="layui-nav right" lay-filter="">
         <li class="layui-nav-item">
-            <a href="javascript:;">Admin</a>
+            <a href="javascript:;">${sessionScope.user.userName}</a>
             <dl class="layui-nav-child">
                 <!-- 二级菜单 -->
                 <dd>
@@ -67,7 +73,6 @@
             <a href="/">前台首页</a>
         </li>
     </ul>
-
 </div>
 <!-- 顶部结束 -->
 <!-- 中部开始 -->
@@ -293,26 +298,26 @@
     //			  var admin = layui.admin;
     //			});
     layui.config({
-        base: './static/js/'
+        base: './js/'
         ,version: '101100'
     }).use('admin');
-    layui.use(['jquery','admin'], function(){
-        var $ = layui.jquery;
-        $(function(){
-            var login = JSON.parse(localStorage.getItem("login"));
-            if(login){
-                if(login=0){
-                    window.location.href='./login.html';
-                    return false;
-                }else{
-                    return false;
-                }
-            }else{
-                window.location.href='./login.html';
-                return false;
-            }
-        });
-    });
+    // layui.use(['jquery','admin'], function(){
+    //     var $ = layui.jquery;
+    //     $(function(){
+    //         var login = JSON.parse(localStorage.getItem("login"));
+    //         if(login){
+    //             if(login=0){
+    //                 window.location.href='./login.jsp';
+    //                 return false;
+    //             }else{
+    //                 return false;
+    //             }
+    //         }else{
+    //             window.location.href='./pages/login.jsp';
+    //             return false;
+    //         }
+    //     });
+    // });
 
 </script>
 </body>
