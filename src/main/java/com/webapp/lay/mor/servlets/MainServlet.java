@@ -12,7 +12,7 @@ public class MainServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getSession().setAttribute("welcome","你好，");
-        request.getRequestDispatcher("./pages/index.jsp").forward(request,response);
+        request.getRequestDispatcher("index.jsp").forward(request,response);
     }
 
     @Override
