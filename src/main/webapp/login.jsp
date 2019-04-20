@@ -49,7 +49,7 @@
             <a href="javascript:reloadCode();" style="width: 38px;height: 38px;line-height: 38px; vertical-align: top"><i class="layui-icon layui-icon-refresh-1" style="font-size: 16px; color: #666666;"></i></a>
             <div class="layui-form-item">
                 <div class="layui-input-block" style="display: inline-block;margin-left: 10px;width: 100%">
-                    <input type="checkbox" lay-skin="switch" value="1"><span style="margin-top: 8px;margin-left: 5px;display: inline-block;vertical-align: middle">记住我</span>
+                    <input type="checkbox" lay-skin="switch" value="1" name="remember"><span style="margin-top: 8px;margin-left: 5px;display: inline-block;vertical-align: middle">记住我</span>
                     <a href="javascript:register()"><span style="float: right;margin-top: 8px;display: inline-block;vertical-align: middle;margin-right: 20px">没有账号？</span></a>
                 </div>
             </div>

@@ -1,6 +1,7 @@
 package com.webapp.lay.mor.entity;
 
 import java.awt.*;
+import java.sql.Blob;
 import java.util.Date;
 
 public class User {
@@ -12,7 +13,15 @@ public class User {
     private Date birthday;
     private String phone;
     private String mail;
-    
+    private Blob face;
+
+    public Blob getFace() {
+        return face;
+    }
+
+    public void setFace(Blob face) {
+        this.face = face;
+    }
 
     public User() {
     }
