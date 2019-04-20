@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/login.css">
     <script src="layui-v2.4.5/layui/layui.js" charset="utf-8"></script>
     <script src="js/login.js" charset="utf-8"></script>
+    <script src="./js/HashEncrypt.js"></script>
     <style>
         .layui-form-onswitch{
             border-color: #189F92;
@@ -28,7 +29,7 @@
     <div class="login">
         <div class="message">morAdmin 1.0 - 管理员登录</div>
         <div id="dark"></div>
-        <form action="login" method="post" class="layui-form" >
+        <form action="login" method="post" class="layui-form" onsubmit="return md5()">
             <div class="layui-form-item input-item">
                 <label for="loginName">账号</label>
                 <input type="text" placeholder="请输入登录账号" autocomplete="off" id="loginName" name="loginName" class="layui-input" lay-verify="required">
@@ -36,7 +37,8 @@
             <hr>
             <div class="layui-form-item input-item">
                 <label for="loginPwd">密码</label>
-                <input type="password" placeholder="请输入登录密码" autocomplete="off" id="loginPwd" name="loginPwd" class="layui-input" lay-verify="required">
+                <input type="password" placeholder="请输入登录密码" autocomplete="off" id="loginPwd" class="layui-input" lay-verify="required">
+                <input type="hidden" name="loginPwd" id="md5_pwd">
             </div>
             <hr>
             <div class="layui-form-item input-item" style="display: inline-block">
@@ -52,16 +54,23 @@
                 </div>
             </div>
             <div class="layui-form-item">
-                <button type="submit" class="layui-btn layui-block" lay-filter="login" style="width: 100%;height: 38px">立&nbsp&nbsp即&nbsp&nbsp登&nbsp&nbsp录</button>
+                <button type="submit" id="submit" class="layui-btn layui-block" lay-filter="login" style="width: 100%;height: 38px">立&nbsp&nbsp即&nbsp&nbsp登&nbsp&nbsp录</button>
             </div>
         </form>
     </div>
 </body>
-<!--重新加载验证码-->
+
 <script type="text/javascript">
+    function md5(){
+        var loginPwd= document.getElementById('loginPwd');
+        var md5_pwd=document.getElementById('md5_pwd');
+        md5_pwd.value = HashEncrypt.MD5(loginPwd.value,false,false);
+        return true;
+    }
+    <!--重新加载验证码-->
     function reloadCode() {
         var time = new Date().getTime();
-        document.getElementById("imageCode").src="../captche?d="+time;
+        document.getElementById("imageCode").src="captche?d="+time;
     }
     function register() {
         layer.msg('别闹，让神仙给你注册一个去', {
