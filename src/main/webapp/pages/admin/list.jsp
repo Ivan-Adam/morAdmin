@@ -4,7 +4,7 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>管理员列表-WeAdmin Frame型后台管理系统-WeAdmin 1.0</title>
+		<title>管理员列表 - morAdmin 1.0</title>
 		<meta name="renderer" content="webkit">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -54,12 +54,13 @@
 						<th>
 							<div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>
 						</th>
-						<th>ID</th>
-						<th>登录名</th>
+						<th>头像</th>
+						<th>账号</th>
+						<th>用户名</th>
+                        <th>性别</th>
 						<th>手机</th>
 						<th>邮箱</th>
-						<th>角色</th>
-						<th>加入时间</th>
+						<th>生日</th>
 						<th>状态</th>
 						<th>操作</th>
 				</thead>
@@ -69,11 +70,12 @@
 							<div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
 						</td>
 						<td>1</td>
-						<td>admin</td>
-						<td>18925139194</td>
-						<td>113664000@qq.com</td>
-						<td>超级管理员</td>
-						<td>2017-01-01 11:11:42</td>
+						<td>${sessionScope.user.loginName}</td>
+						<td>${sessionScope.user.userName}</td>
+                        <td>${sessionScope.user.sex}</td>
+						<td>${sessionScope.user.phone}</td>
+						<td>${sessionScope.user.mail}</td>
+						<td>${sessionScope.user.birthday}</td>
 						<td class="td-status">
 							<span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span></td>
 						<td class="td-manage">

@@ -9,18 +9,21 @@ public class User {
     private String userName;
     private Image userFace;
     private String sex;
-    private Date bitthday;
+    private Date birthday;
+    private String phone;
+    private String mail;
+    
 
     public User() {
     }
 
-    public User(String loginName, String loginPwd, String userName, Image userFace, String sex, Date birthday) {
+    public User(String loginName, String loginPwd, String userName, Image userFace, String sex, Date birthday,String phone,String mail) {
         this.loginName = loginName;
         this.loginPwd = loginPwd;
         this.userName = userName;
         this.userFace = userFace;
         this.sex = sex;
-        this.bitthday = birthday;
+        this.birthday = birthday;
     }
 
     public String getLoginName() {
@@ -64,10 +67,26 @@ public class User {
     }
 
     public Date getBirthday() {
-        return bitthday;
+        return birthday;
     }
 
     public void setBirthday(Date bitthday) {
-        this.bitthday = bitthday;
+        this.birthday = bitthday;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getMail() {
+        return mail;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
     }
 }
