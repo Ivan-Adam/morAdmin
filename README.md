@@ -16,6 +16,12 @@
 
 ## morAdmin 1.0.0
 
+### 2019-4-18
+
 - 改写了登录界面，主要增加了表单输入效果
 - 增加登录业务，详情查询文档
 - 创建数据库，详情查询文档 [Database_readme.md](https://github.com/mdz3201/morAdmin/blob/master/Database_readme.md)
+
+### 2019-4-20
+- 增加自动登录业务，详情查询文档
+- 对用户提交的密码采用MD5算法进行单向加密，手动更新数据库
