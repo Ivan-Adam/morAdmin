@@ -18,10 +18,39 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Object obj = request.getSession().getAttribute("user");
+        Cookie[] cookies = request.getCookies();
+        Object obj = request.getSession().getAttribute("loginUser");
+        boolean flag = false;
+        if(cookies!=null){
+            for(Cookie cookie:cookies){
+                if("loginInfo".equals(cookie.getName())){
+                    flag = true;
+                    UserService service = new UserService();
+                    User user = service.autoLogin(cookie.getValue());
+                    if(user!=null){
+                        request.getSession().setAttribute("user",user);
+                        String onlineUsers = (String) request.getServletContext().getAttribute("onlineUsers");
+                        onlineUsers = onlineUsers+","+cookie.getValue();
+                        Integer onlineCount = (Integer)request.getServletContext().getAttribute("onlineCount");
+                        if(onlineCount==null){
+                            onlineCount=0;
+                        }
+                        onlineCount++;
+                        request.getServletContext().setAttribute("onlineCount",onlineCount);
+                        request.getServletContext().setAttribute("onlineUsers",onlineUsers);
+                        response.sendRedirect("main");
+                    }else {
+                        response.sendRedirect("login.jsp");
+                    }
+                    return;
+                }
+            }
+        }
         if(obj!=null){
+            flag = true;
             response.sendRedirect("main");
-        }else {
+        }
+        if(!flag){
             response.sendRedirect("login.jsp");
         }
     }
@@ -35,6 +64,7 @@ public class LoginServlet extends HttpServlet {
         String loginName = request.getParameter("loginName");
         String loginPwd = request.getParameter("loginPwd");
         String captche = request.getParameter("captche").toLowerCase();
+        String remember = request.getParameter("remember");
 
         //用Session读取验证码
         String saveCode = "";
@@ -54,6 +84,11 @@ public class LoginServlet extends HttpServlet {
             User user;
             user = service.login(loginName,loginPwd);
             if(user!=null){
+                if("1".equals(remember)){
+                    Cookie cookie = new Cookie("loginInfo",user.getLoginName());
+                    cookie.setMaxAge(7*24*3600);
+                    response.addCookie(cookie);
+                }
                 request.getSession().setAttribute("user",user);
                 onlineUsers = onlineUsers+","+loginName;
                 Integer onlineCount = (Integer)request.getServletContext().getAttribute("onlineCount");

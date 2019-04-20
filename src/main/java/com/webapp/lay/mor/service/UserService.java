@@ -17,6 +17,9 @@ public class UserService {
         }
         return user;
     }
+    public User autoLogin(String loginName){
+        return userDao.findByLoginName(loginName);
+    }
 
     public List<User> findAll(){
         return userDao.find(null);

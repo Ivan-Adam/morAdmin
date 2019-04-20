@@ -4,6 +4,8 @@ package com.webapp.lay.mor.dao.impl;
 import com.webapp.lay.mor.dao.IUserDao;
 import com.webapp.lay.mor.entity.User;
 
+import java.io.*;
+import java.sql.Blob;
 import java.util.List;
 
 public class UserDao implements IUserDao {
@@ -46,6 +48,9 @@ public class UserDao implements IUserDao {
                 user.setBirthday(BC.rs.getDate("birthday"));
                 user.setPhone(BC.rs.getString("phone"));
                 user.setMail(BC.rs.getString("mail"));
+
+                user.setFace(BC.rs.getBlob("userFace"));
+
             }else {
                 user = null;
             }
