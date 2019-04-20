@@ -37,51 +37,52 @@
 												</a>
 											</li>
 											<li class="layui-col-xs3">
-												<a href="http://layim.layui.com/" target="_blank">
+												<a href="https://lovetime.gitee.io/weadmin/" target="_blank">
 													<i class="layui-icon">&#xe606;</i>
-													<cite>LayIM</cite>
-													<p><span>Layui官方出品的一款Web即时通讯前端解决方案</span></p>
+													<cite>WeAdmin</cite>
+													<p><span>一款基于Layui的前端模板</span></p>
 												</a>
 											</li>
-											<li class="layui-col-xs3">
-												<a href="http://fly.layui.com/case/u/777504" target="_blank">
-													<i class="layui-icon">&#xe6c6;</i>
-													<cite>案例点赞</cite>
-													<p><span>谢谢关注，更欢迎提意见，虽然我不一定能做好~~</span></p>
-												</a>
-											</li>
-											
-
+                                            <li class="layui-col-xs3">
+                                                <a href="https://github.com/mdz3201/morAdmin" target="_blank">
+                                                    <i class="layui-icon">&#xe600;</i>
+                                                    <cite>Github下载</cite>
+                                                    <p><span>欢迎Fork和Star</span></p>
+                                                </a>
+                                            </li>
 										</ul>
 										<ul class="layui-row layui-col-space10">
+                                            <li class="layui-col-xs3">
+                                                <a href="javascript:;" target="_blank">
+                                                    <i class="layui-icon layui-icon-set"></i>
+                                                    <cite>设置</cite>
+                                                    <p><span>快捷方式示例</span></p>
+                                                </a>
+                                            </li>
+
+                                            <li class="layui-col-xs3">
+                                                <a href="javascript:;" target="_blank">
+                                                    <i class="layui-icon layui-icon-set"></i>
+                                                    <cite>设置</cite>
+                                                    <p><span>快捷方式示例</span></p>
+                                                </a>
+                                            </li>
 											<li class="layui-col-xs3">
-												<a href="https://github.com/WangEn/WeAdmin" target="_blank">
-													<i class="layui-icon">&#xe600;</i>
-													<cite>Github下载</cite>
-												</a>
-											</li>
-											
-											<li class="layui-col-xs3">
-												<a href="https://gitee.com/lovetime/WeAdmin" target="_blank">
-													<i class="layui-icon">&#xe62c;</i>
-													<cite>码云下载</cite>
+												<a href="javascript:;" target="_blank">
+													<i class="layui-icon layui-icon-set"></i>
+													<cite>设置</cite>
+                                                    <p><span>快捷方式示例</span></p>
 												</a>
 											</li>
 											<li class="layui-col-xs3">
 												<a href="javascript:;" target="_blank">
 													<i class="layui-icon layui-icon-set"></i>
 													<cite>设置</cite>
-												</a>
-											</li>
-											<li class="layui-col-xs3">
-												<a href="javascript:;" target="_blank">
-													<i class="layui-icon layui-icon-set"></i>
-													<cite>设置</cite>
+                                                    <p><span>快捷方式示例</span></p>
 												</a>
 											</li>
 											
 										</ul>
-
 									</div>
 									<div class="layui-carousel-ind">
 										<ul>
@@ -103,7 +104,7 @@
 								<i class="layui-icon" style="color: #FF5722;">&#xe756;</i>
 							</div>
 							<div class="layui-card-body layui-text weadmin-text">
-								<p>Layui发版以来一直受到不少猿的推崇，作为其中的小白，我也一直在推崇和学习中挣扎，WeAdmin无他，也只是小白实操的一个记录。</p>
+								<p>正在学习Java Web开发，把上课同步做的练习放到这，第一次尝试，代码有些粗糙，如果有感兴趣的欢迎一起学习。</p>
 								<p>更多的疑难解答，建议移步查看<a href="http://www.layui.com/doc/" target="_blank">layui文档</a>或者进入<a href="http://fly.layui.com/" target="_blank">Fly社区</a>搜索。</p>
 								<p>更完善的商业使用，强烈建议移步<a href="http://www.layui.com/admin/" target="_blank">layuiAdmin</a></p>				
 							</div>

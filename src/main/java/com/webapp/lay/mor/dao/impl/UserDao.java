@@ -44,6 +44,8 @@ public class UserDao implements IUserDao {
                 user.setUserName(BC.rs.getString("userName"));
                 user.setSex(BC.rs.getString("sex"));
                 user.setBirthday(BC.rs.getDate("birthday"));
+                user.setPhone(BC.rs.getString("phone"));
+                user.setMail(BC.rs.getString("mail"));
             }else {
                 user = null;
             }
