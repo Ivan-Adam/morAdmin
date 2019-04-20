@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import "./morAdmin.css";
+@import "../layui-v2.4.5/layui/css/layui.css";
 body {
     background: url(../images/bg.png) no-repeat center;
     background-size: cover;

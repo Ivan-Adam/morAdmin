@@ -22,7 +22,7 @@ public class LoginServlet extends HttpServlet {
         if(obj!=null){
             response.sendRedirect("main");
         }else {
-            response.sendRedirect("./pages/login.jsp");
+            response.sendRedirect("login.jsp");
         }
     }
 
@@ -44,7 +44,7 @@ public class LoginServlet extends HttpServlet {
         if(onlineUsers!=null){
             if(onlineUsers.indexOf(loginName)>=0){
                 //用户已在别处登录
-                response.sendRedirect("./pages/login.jsp");
+                response.sendRedirect("login.jsp");
                 return;
             }
         }
@@ -65,11 +65,11 @@ public class LoginServlet extends HttpServlet {
                 request.getServletContext().setAttribute("onlineUsers",onlineUsers);
                 response.sendRedirect("main");
             }else {
-                response.sendRedirect("./pages/login.jsp");
+                response.sendRedirect("login.jsp");
             }
         } else {
             //提示验证码错误
-            response.sendRedirect("./pages/login.jsp");
+            response.sendRedirect("login.jsp");
         }
     }
 }
