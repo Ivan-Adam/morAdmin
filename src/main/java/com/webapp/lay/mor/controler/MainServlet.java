@@ -1,4 +1,4 @@
-package com.webapp.lay.mor.servlets;
+package com.webapp.lay.mor.controler;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,8 +11,13 @@ import java.io.IOException;
 public class MainServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getSession().setAttribute("welcome","你好，");
-        request.getRequestDispatcher("index.jsp").forward(request,response);
+        Object obj = request.getSession().getAttribute("user");
+        if(obj != null) {
+            request.getSession().setAttribute("welcome","你好，");
+            request.getRequestDispatcher("./WEB-INF/views/index.jsp").forward(request,response);
+        }else {
+            response.sendRedirect("login");
+        }
     }
 
     @Override

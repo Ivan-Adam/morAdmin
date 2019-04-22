@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set value="${pageContext.request.contextPath}" var="basePath" scope="page"/>
 <html>
 <head>
     <title>管理员登录 - morAdmin 1.0</title>
@@ -13,11 +15,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <link rel="shortcut icon" href="images/fly.png" type="image/x-icon" />
-    <link rel="stylesheet" href="css/login.css">
-    <script src="layui-v2.4.5/layui/layui.js" charset="utf-8"></script>
-    <script src="js/login.js" charset="utf-8"></script>
-    <script src="./js/HashEncrypt.js"></script>
+    <link rel="shortcut icon" href="${basePath}/static/images/fly.png" type="image/x-icon" />
+    <link rel="stylesheet" href="${basePath}/static/css/login.css">
+    <script src="${basePath}/layui-v2.4.5/layui/layui.js" charset="utf-8"></script>
+    <script src="${basePath}/static/js/login.js" charset="utf-8"></script>
+    <script src="${basePath}/static/js/HashEncrypt.js"></script>
     <style>
         .layui-form-onswitch{
             border-color: #189F92;
@@ -26,10 +28,22 @@
     </style>
 </head>
 <body>
+<script type="text/javascript">
+    function test() {
+        layer.msg('别闹，让神仙给你注册一个去', {
+            time: 2000,
+        });
+    }
+    test();
+    var func = function() {
+        alert("你好，程序员");
+    };
+    func();
+</script>
     <div class="login">
         <div class="message">morAdmin 1.0 - 管理员登录</div>
         <div id="dark"></div>
-        <form action="login" method="post" class="layui-form" onsubmit="return md5()">
+        <form action="../../login" method="post" class="layui-form" onsubmit="return md5()">
             <div class="layui-form-item input-item">
                 <label for="loginName">账号</label>
                 <input type="text" placeholder="请输入登录账号" autocomplete="off" id="loginName" name="loginName" class="layui-input" lay-verify="required">
@@ -58,9 +72,24 @@
             </div>
         </form>
     </div>
+
+    <c:choose>
+        <c:when test="${requestScope.loginWrong == '1'}">
+            <script type="text/javascript">register();</script>
+        </c:when>
+        <c:when test="${requestScope.loginWrong == '2'}">
+            <script type="text/javascript">register();</script>
+        </c:when>
+        <c:when test="${requestScope.loginWrong == '3'}">
+            <script type="text/javascript">register();</script>
+        </c:when>
+        <c:otherwise></c:otherwise>
+    </c:choose>
+
 </body>
 
 <script type="text/javascript">
+    //客户端加密
     function md5(){
         var loginPwd= document.getElementById('loginPwd');
         var md5_pwd=document.getElementById('md5_pwd');

@@ -6,12 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
-<%
-    String path = request.getContextPath();
-    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-    request.setAttribute("path", basePath);
-%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set value="${pageContext.request.contextPath}" var="basePath" scope="page"/>
 
 <html lang="en">
 <head>
@@ -21,10 +17,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <link rel="shortcut icon" href="${bassPath}images/fly.png" type="image/x-icon" />
-    <link rel="stylesheet" href="${bassPath}css/font.css">
-    <link rel="stylesheet" href="${bassPath}css/weadmin.css">
-    <script src="${bassPath}layui-v2.4.5/layui/layui.js" charset="utf-8"></script>
+    <link rel="shortcut icon" href="${basePath}/static/images/fly.png" type="image/x-icon" />
+    <link rel="stylesheet" href="${basePath}/static/css/font.css">
+    <link rel="stylesheet" href="${basePath}/static/css/weadmin.css">
+    <script src="${basePath}/layui-v2.4.5/layui/layui.js" charset="utf-8"></script>
 </head>
 <body>
 <!-- 顶部开始 -->
@@ -54,7 +50,7 @@
     </ul>
     <ul class="layui-nav right" lay-filter="">
         <li class="layui-nav-item">
-            <a href="javascript:;"><img src="./images/bg.png" class="layui-nav-img">${sessionScope.user.userName}</a>
+            <a href="javascript:;"><img src="${basePath}/static/images/${sessionScope.user.userFace}" class="layui-nav-img">${sessionScope.user.userName}</a>
 
             <dl class="layui-nav-child">
                 <!-- 二级菜单 -->
@@ -129,7 +125,7 @@
         </ul>
         <div class="layui-tab-content">
             <div class="layui-tab-item layui-show">
-                <iframe src='./pages/welcome.jsp' frameborder="0" scrolling="yes" class="weIframe"></iframe>
+                <iframe src='${basePath}/pages/welcome.jsp' frameborder="0" scrolling="yes" class="weIframe"></iframe>
             </div>
         </div>
     </div>
@@ -152,7 +148,7 @@
     //			  var admin = layui.admin;
     //			});
     layui.config({
-        base: './js/'
+        base: '${basePath}/static/js/'
         ,version: '101100'
     }).use('admin');
     // layui.use(['jquery','admin'], function(){

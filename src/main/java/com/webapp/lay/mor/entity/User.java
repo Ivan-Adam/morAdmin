@@ -8,31 +8,26 @@ public class User {
     private String loginName;
     private String loginPwd;
     private String userName;
-    private Image userFace;
-    private String sex;
-    private Date birthday;
+    private String userFace;
+    private int sex;
+    private Date joinTime;
     private String phone;
     private String mail;
-    private Blob face;
-
-    public Blob getFace() {
-        return face;
-    }
-
-    public void setFace(Blob face) {
-        this.face = face;
-    }
+    private int prim;
 
     public User() {
     }
 
-    public User(String loginName, String loginPwd, String userName, Image userFace, String sex, Date birthday,String phone,String mail) {
+    public User(String loginName, String loginPwd, String userName, String userFace, int sex, Date joinTime, String phone, String mail, int prim) {
         this.loginName = loginName;
         this.loginPwd = loginPwd;
         this.userName = userName;
         this.userFace = userFace;
         this.sex = sex;
-        this.birthday = birthday;
+        this.joinTime = joinTime;
+        this.phone = phone;
+        this.mail = mail;
+        this.prim = prim;
     }
 
     public String getLoginName() {
@@ -59,28 +54,28 @@ public class User {
         this.userName = userName;
     }
 
-    public Image getUserFace() {
+    public String getUserFace() {
         return userFace;
     }
 
-    public void setUserFace(Image userFace) {
+    public void setUserFace(String userFace) {
         this.userFace = userFace;
     }
 
-    public String getSex() {
+    public int getSex() {
         return sex;
     }
 
-    public void setSex(String sex) {
+    public void setSex(int sex) {
         this.sex = sex;
     }
 
-    public Date getBirthday() {
-        return birthday;
+    public Date getJoinTime() {
+        return joinTime;
     }
 
-    public void setBirthday(Date bitthday) {
-        this.birthday = bitthday;
+    public void setJoinTime(Date joinTime) {
+        this.joinTime = joinTime;
     }
 
     public String getPhone() {
@@ -97,5 +92,13 @@ public class User {
 
     public void setMail(String mail) {
         this.mail = mail;
+    }
+
+    public int getPrim() {
+        return prim;
+    }
+
+    public void setPrim(int prim) {
+        this.prim = prim;
     }
 }

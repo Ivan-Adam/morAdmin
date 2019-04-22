@@ -1,4 +1,4 @@
-package com.webapp.lay.mor.servlets;
+package com.webapp.lay.mor.controler;
 
 import com.webapp.lay.mor.entity.User;
 import com.webapp.lay.mor.service.UserService;
@@ -19,9 +19,9 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Cookie[] cookies = request.getCookies();
-        Object obj = request.getSession().getAttribute("loginUser");
+        Object obj = request.getSession().getAttribute("user");
         boolean flag = false;
-        if(cookies!=null){
+        if(cookies!=null){//如果本地cookie有自动登录信息，并且能在数据库中找到用户，则自动登录
             for(Cookie cookie:cookies){
                 if("loginInfo".equals(cookie.getName())){
                     flag = true;
@@ -29,18 +29,21 @@ public class LoginServlet extends HttpServlet {
                     User user = service.autoLogin(cookie.getValue());
                     if(user!=null){
                         request.getSession().setAttribute("user",user);
-                        String onlineUsers = (String) request.getServletContext().getAttribute("onlineUsers");
+                        String onlineUsers = (String) request.getServletContext().getAttribute("onlineUsers");//有可能为空
+                        if(onlineUsers == null){
+                            onlineUsers = "";
+                        }
                         onlineUsers = onlineUsers+","+cookie.getValue();
-                        Integer onlineCount = (Integer)request.getServletContext().getAttribute("onlineCount");
+                        Integer onlineCount = (Integer)request.getServletContext().getAttribute("onlineCount");//有可能为空
                         if(onlineCount==null){
                             onlineCount=0;
                         }
                         onlineCount++;
-                        request.getServletContext().setAttribute("onlineCount",onlineCount);
-                        request.getServletContext().setAttribute("onlineUsers",onlineUsers);
+                        request.getServletContext().setAttribute("onlineCount",onlineCount);//存到application
+                        request.getServletContext().setAttribute("onlineUsers",onlineUsers);//存到application
                         response.sendRedirect("main");
                     }else {
-                        response.sendRedirect("login.jsp");
+                        request.getRequestDispatcher("./WEB-INF/views/login.jsp").forward(request,response);
                     }
                     return;
                 }
@@ -51,7 +54,7 @@ public class LoginServlet extends HttpServlet {
             response.sendRedirect("main");
         }
         if(!flag){
-            response.sendRedirect("login.jsp");
+            request.getRequestDispatcher("./WEB-INF/views/login.jsp").forward(request,response);
         }
     }
 
@@ -74,7 +77,15 @@ public class LoginServlet extends HttpServlet {
         if(onlineUsers!=null){
             if(onlineUsers.indexOf(loginName)>=0){
                 //用户已在别处登录
-                response.sendRedirect("login.jsp");
+                /*
+                * 用于弹窗提示
+                * 根据本次请求返回的数据
+                * 1：别处登录
+                * 2：用户名密码错误
+                * 3：验证码错误
+                 */
+                request.setAttribute("loginWrong",'1');
+                request.getRequestDispatcher("./WEB-INF/views/login.jsp").forward(request,response);
                 return;
             }
         }
@@ -90,6 +101,9 @@ public class LoginServlet extends HttpServlet {
                     response.addCookie(cookie);
                 }
                 request.getSession().setAttribute("user",user);
+                if(onlineUsers == null){
+                    onlineUsers = "";
+                }
                 onlineUsers = onlineUsers+","+loginName;
                 Integer onlineCount = (Integer)request.getServletContext().getAttribute("onlineCount");
                 if(onlineCount==null){
@@ -100,11 +114,13 @@ public class LoginServlet extends HttpServlet {
                 request.getServletContext().setAttribute("onlineUsers",onlineUsers);
                 response.sendRedirect("main");
             }else {
-                response.sendRedirect("login.jsp");
+                request.setAttribute("loginWrong",'2');
+                request.getRequestDispatcher("./WEB-INF/views/login.jsp").forward(request,response);
             }
         } else {
             //提示验证码错误
-            response.sendRedirect("login.jsp");
+            request.setAttribute("loginWrong",'3');
+            request.getRequestDispatcher("./WEB-INF/views/login.jsp").forward(request,response);
         }
     }
 }
