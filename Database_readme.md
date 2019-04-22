@@ -5,21 +5,23 @@
 
 |--------user
 
-|------------loginName
+|------------loginName varchar(20) primary key
 
-|------------loginPwd
+|------------loginPwd varchar(32) not null
 
-|------------userName
+|------------userName varchar(20)
 
-|------------sex
+|------------sex int
 
-|------------birthday
+|------------joinTime datetime
 
-|------------userFace
+|------------userFace varchar(64)
 
-|------------phone
+|------------prim int
 
-|------------mail
+|------------phone varchar(11)
+
+|------------mail varchar(20)
 
 +------------------------------
 
