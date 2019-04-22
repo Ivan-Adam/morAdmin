@@ -9,19 +9,19 @@
 
 |------------loginPwd varchar(32) not null
 
-|------------userName varchar(20)
+|------------userName varchar(20) not null
 
-|------------sex int
+|------------sex int not null
 
-|------------joinTime datetime
+|------------joinTime datetime not null
 
-|------------userFace varchar(64)
+|------------userFace varchar(64) not null
 
-|------------prim int
+|------------prim int not null
 
-|------------phone varchar(11)
+|------------phone varchar(11) not null
 
-|------------mail varchar(20)
+|------------mail varchar(20) not null
 
 +------------------------------
 
