@@ -1,7 +1,7 @@
 @charset "utf-8";
-@import "../layui-v2.4.5/layui/css/layui.css";
+@import "../../layui-v2.4.5/layui/css/layui.css";
 body {
-    background: url(../images/bg.png) no-repeat center;
+    background:url("../images/bg.png") no-repeat center;
     background-size: cover;
     overflow: hidden;
 }
@@ -26,7 +26,7 @@ body {
     font-size: 16px;
 }
 .login #dark {
-    background: url(../images/aiwrap.png);
+    background: url("../images/aiwrap.png");
     width: 18px;
     height: 10px;
     margin: 0 0 20px -58px;

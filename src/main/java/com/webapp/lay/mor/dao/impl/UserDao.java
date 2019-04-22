@@ -44,13 +44,12 @@ public class UserDao implements IUserDao {
                 user.setLoginName(BC.rs.getString("loginName"));
                 user.setLoginPwd(BC.rs.getString("loginPwd"));
                 user.setUserName(BC.rs.getString("userName"));
-                user.setSex(BC.rs.getString("sex"));
-                user.setBirthday(BC.rs.getDate("birthday"));
+                user.setSex(BC.rs.getInt("sex"));
+                user.setJoinTime(BC.rs.getDate("joinTime"));
                 user.setPhone(BC.rs.getString("phone"));
                 user.setMail(BC.rs.getString("mail"));
-
-                user.setFace(BC.rs.getBlob("userFace"));
-
+                user.setPrim(BC.rs.getInt("prim"));
+                user.setUserFace(BC.rs.getString("userFace"));
             }else {
                 user = null;
             }

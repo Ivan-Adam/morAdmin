@@ -1,4 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set value="${pageContext.request.contextPath}" var="basePath" scope="page"/>
 <!DOCTYPE html>
 <html>
 
@@ -8,8 +10,8 @@
 		<meta name="renderer" content="webkit">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
-		<link rel="stylesheet" href="../../css/font.css">
-		<link rel="stylesheet" href="../../css/weadmin.css">
+		<link rel="stylesheet" href="../../static/css/font.css">
+		<link rel="stylesheet" href="../../static/css/weadmin.css">
 		<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
 		<!--[if lt IE 9]>
 	      <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
@@ -60,7 +62,7 @@
                         <th>性别</th>
 						<th>手机</th>
 						<th>邮箱</th>
-						<th>生日</th>
+						<th>加入时间</th>
 						<th>状态</th>
 						<th>操作</th>
 				</thead>
@@ -69,13 +71,19 @@
 						<td>
 							<div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
 						</td>
-						<td>1</td>
+						<td><img src="${sessionScope.user.userFace}" class="layui-nav-img"></td>
 						<td>${sessionScope.user.loginName}</td>
 						<td>${sessionScope.user.userName}</td>
-                        <td>${sessionScope.user.sex}</td>
+                        <td>
+                            <c:choose>
+                                <c:when test="${sessionScope.user.sex == '1'}">男</c:when>
+                                <c:when test="${sessionScope.user.sex == '2'}">女</c:when>
+                                <c:otherwise>未知</c:otherwise>
+                            </c:choose>
+                        </td>
 						<td>${sessionScope.user.phone}</td>
 						<td>${sessionScope.user.mail}</td>
-						<td>${sessionScope.user.birthday}</td>
+						<td>${sessionScope.user.joinTime}</td>
 						<td class="td-status">
 							<span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span></td>
 						<td class="td-manage">

@@ -1,4 +1,4 @@
-package com.webapp.lay.mor.servlets;
+package com.webapp.lay.mor.controler;
 
 import javax.imageio.ImageIO;
 import javax.servlet.ServletException;
