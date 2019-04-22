@@ -2,51 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b439b8d3-b0bb-446b-b2bd-39b6fe634358" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/bg.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/dao/impl/BC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/dao/impl/BC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/dao/impl/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/dao/impl/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/servlets/CaptcheServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/CaptcheServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/servlets/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/servlets/MainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/MainServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/font.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/font.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/weadmin.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/weadmin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/fonts/iconfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/fonts/iconfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/fonts/iconfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/fonts/iconfont.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/fonts/iconfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/fonts/iconfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/fonts/iconfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/fonts/iconfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/aiwrap.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/aiwrap.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/userFace/001.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/fly.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/fly.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/HashEncrypt.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/HashEncrypt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/eleDel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/eleDel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/extends/tabmenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/extends/tabmenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/weadmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/weadmin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/welcome.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/dao/impl/BC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/dao/impl/BC.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/dao/impl/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/dao/impl/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/servlets/CaptcheServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/servlets/LoginServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/servlets/MainServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/index_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/index_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/pages/admin/list_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/pages/admin/list_jsp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/pages/admin/list_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/pages/admin/list_jsp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/pages/welcome_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/pages/welcome_jsp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/pages/welcome_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/pages/welcome_jsp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/userFace/001.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/userFace/001.jpg" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -188,7 +146,7 @@
           <entry key="html" value="9" />
           <entry key="java" value="818" />
           <entry key="js" value="19" />
-          <entry key="jsp" value="1609" />
+          <entry key="jsp" value="1636" />
           <entry key="md" value="26" />
           <entry key="xml" value="2" />
         </counts>
@@ -198,7 +156,7 @@
           <entry key="CSS" value="109" />
           <entry key="HTML" value="9" />
           <entry key="JAVA" value="818" />
-          <entry key="JSP" value="1609" />
+          <entry key="JSP" value="1636" />
           <entry key="JavaScript" value="19" />
           <entry key="Markdown" value="26" />
           <entry key="XML" value="2" />
@@ -208,11 +166,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="52" column="67" lean-forward="true" selection-start-line="52" selection-start-column="67" selection-end-line="52" selection-end-column="67" />
+            <state relative-caret-position="304">
+              <caret line="52" column="69" selection-start-line="52" selection-start-column="69" selection-end-line="52" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -235,11 +193,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/admin/list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="817">
-              <caret line="73" column="38" lean-forward="true" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
+            <state relative-caret-position="76">
+              <caret line="73" column="61" lean-forward="true" selection-start-line="73" selection-start-column="61" selection-end-line="73" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -447,6 +405,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="morAdmin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="morAdmin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -482,7 +449,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555941059371" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555941426265" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../morAdmin_4_22" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -505,11 +472,11 @@
       <recent name="com.webapp.lay.service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\GitHub\morAdmin\src\main\webapp\pages\admin" />
       <recent name="E:\GitHub\morAdmin\src\main\webapp\pages" />
       <recent name="E:\GitHub\morAdmin\src\main\webapp\WEB-INF\views" />
       <recent name="E:\GitHub\morAdmin\src\main\webapp\static\css" />
       <recent name="E:\GitHub\morAdmin\src\main\webapp" />
-      <recent name="E:\GitHub\morAdmin\src\main\webapp\static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -571,10 +538,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59285000" />
+    <option name="totallyTimeSpent" value="59652000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1563" height="886" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49802372" visible="true" weight="0.24252492" />
       <window_info id="Structure" order="1" sideWeight="0.5019763" side_tool="true" weight="0.25315616" />
@@ -951,17 +919,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/admin/list.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="73" column="38" lean-forward="true" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
+        <state relative-caret-position="304">
+          <caret line="52" column="69" selection-start-line="52" selection-start-column="69" selection-end-line="52" selection-end-column="69" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/admin/list.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="52" column="67" lean-forward="true" selection-start-line="52" selection-start-column="67" selection-end-line="52" selection-end-column="67" />
+        <state relative-caret-position="76">
+          <caret line="73" column="61" lean-forward="true" selection-start-line="73" selection-start-column="61" selection-end-line="73" selection-end-column="61" />
         </state>
       </provider>
     </entry>

@@ -50,7 +50,7 @@
     </ul>
     <ul class="layui-nav right" lay-filter="">
         <li class="layui-nav-item">
-            <a href="javascript:;"><img src="${basePath}/static/images/${sessionScope.user.userFace}" class="layui-nav-img">${sessionScope.user.userName}</a>
+            <a href="javascript:;"><img src="${basePath}/pages/admin/${sessionScope.user.userFace}" class="layui-nav-img">${sessionScope.user.userName}</a>
 
             <dl class="layui-nav-child">
                 <!-- 二级菜单 -->
