@@ -6,6 +6,7 @@ import com.webapp.lay.mor.entity.User;
 
 import java.io.*;
 import java.sql.Blob;
+import java.util.ArrayList;
 import java.util.List;
 
 public class UserDao implements IUserDao {
@@ -26,7 +27,32 @@ public class UserDao implements IUserDao {
 
     @Override
     public List<User> find(User user) {
-        return null;
+        BC BC=new BC();
+        BC.loadDiver();
+        BC.setConn();
+        List<User> list = new ArrayList<User>();
+        try {
+            BC.sql="select *from user";
+            BC.pstmt=BC.conn.prepareStatement(BC.sql);
+            BC.rs=BC.pstmt.executeQuery();
+            while (BC.rs.next()){
+                User user1=new User();
+                user1.setLoginName(BC.rs.getString("loginName"));
+                user1.setLoginPwd(BC.rs.getString("loginPwd"));
+                user1.setUserName(BC.rs.getString("userName"));
+                user1.setSex(BC.rs.getInt("sex"));
+                user1.setJoinTime(BC.rs.getDate("joinTime"));
+                user1.setPhone(BC.rs.getString("phone"));
+                user1.setMail(BC.rs.getString("mail"));
+                user1.setPrim(BC.rs.getInt("prim"));
+                user1.setUserFace(BC.rs.getString("userFace"));
+                list.add(user1);
+            }
+        }catch(Exception e) {
+            e.printStackTrace();
+        }
+        BC.close();
+        return list;
     }
 
     @Override

@@ -81,7 +81,7 @@
       </div>
     </div>
 		<script src="../../lib/layui/layui.js" charset="utf-8"></script>
-    <script src="../../static/js/eleDel.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../../static/js/eleDel.js" type="text/javascript" charset="utf-8"></script>
   </body>
 
 </html>

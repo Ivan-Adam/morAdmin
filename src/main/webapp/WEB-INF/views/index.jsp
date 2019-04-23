@@ -50,7 +50,7 @@
     </ul>
     <ul class="layui-nav right" lay-filter="">
         <li class="layui-nav-item">
-            <a href="javascript:;"><img src="${basePath}/static/images/${sessionScope.user.userFace}" class="layui-nav-img">${sessionScope.user.userName}</a>
+            <a href="javascript:;"><img src="${basePath}/static/${sessionScope.user.userFace}" class="layui-nav-img">${sessionScope.user.userName}</a>
 
             <dl class="layui-nav-child">
                 <!-- 二级菜单 -->
@@ -84,7 +84,7 @@
                 </a>
                 <ul class="sub-menu">
                     <li>
-                        <a _href="./pages/member/list.jsp">
+                        <a _href="/user/list">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>会员列表</cite>
                         </a>
@@ -105,7 +105,7 @@
                 </a>
                 <ul class="sub-menu">
                     <li>
-                        <a _href="./pages/admin/list.jsp">
+                        <a _href="/user/list">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>管理员列表</cite>
                         </a>
@@ -125,7 +125,7 @@
         </ul>
         <div class="layui-tab-content">
             <div class="layui-tab-item layui-show">
-                <iframe src='${basePath}/pages/welcome.jsp' frameborder="0" scrolling="yes" class="weIframe"></iframe>
+                <iframe src='/welcome' frameborder="0" scrolling="yes" class="weIframe"></iframe>
             </div>
         </div>
     </div>
@@ -135,18 +135,18 @@
 <!-- 中部结束 -->
 <!-- 底部开始 -->
 <div class="footer">
-    <div class="copyright">Copyright ©2018 WeAdmin v1.0 All Rights Reserved</div>
+    <div class="copyright">Copyright ©2019 morAdmin v1.0 All Rights Reserved</div>
 </div>
 <!-- 底部结束 -->
 <script type="text/javascript">
     //			layui扩展模块的两种加载方式-示例
-    //		    layui.extend({
-    //			  admin: '{/}../../static/js/admin' // {/}的意思即代表采用自有路径，即不跟随 base 路径
-    //			});
-    //			//使用拓展模块
-    //			layui.use('admin', function(){
-    //			  var admin = layui.admin;
-    //			});
+    // 		    layui.extend({
+    // 			  admin: '{/}../../static/js/admin' // {/}的意思即代表采用自有路径，即不跟随 base 路径
+    // 			});
+    // 			//使用拓展模块
+    // 			layui.use('admin', function(){
+    // 			  var admin = layui.admin;
+    // 			});
     layui.config({
         base: '${basePath}/static/js/'
         ,version: '101100'

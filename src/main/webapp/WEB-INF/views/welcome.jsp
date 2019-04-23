@@ -1,18 +1,21 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<c:set value="${pageContext.request.contextPath}" var="basePath" scope="page"/>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>欢迎页面-WeAdmin Frame型后台管理系统-WeAdmin 1.0</title>
+		<title>欢迎页面 - morAdmin 1.0</title>
 		<meta name="renderer" content="webkit">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
-		<link rel="stylesheet" href="../static/css/font.css">
-		<link rel="stylesheet" href="../static/css/weadmin.css">
+		<link rel="stylesheet" href="${basePath}/static/css/font.css">
+		<link rel="stylesheet" href="${basePath}/static/css/weadmin.css">
 	</head>
 	<body>
 		<div class="weadmin-body">
-			<blockquote class="layui-elem-quote">欢迎使用WeAdmin 后台模版！</blockquote>
+			<blockquote class="layui-elem-quote">欢迎使用 morAdmin 1.0.0 开发版</blockquote>
 			<div class="layui-fluid" style="overflow: hidden;">
 				<div class="layui-row layui-col-space15">
 					<div class="layui-col-md8">
@@ -104,9 +107,10 @@
 								<i class="layui-icon" style="color: #FF5722;">&#xe756;</i>
 							</div>
 							<div class="layui-card-body layui-text weadmin-text">
-								<p>正在学习Java Web开发，把上课同步做的练习放到这，第一次尝试，代码有些粗糙，如果有感兴趣的欢迎一起学习。</p>
-								<p>更多的疑难解答，建议移步查看<a href="http://www.layui.com/doc/" target="_blank">layui文档</a>或者进入<a href="http://fly.layui.com/" target="_blank">Fly社区</a>搜索。</p>
-								<p>更完善的商业使用，强烈建议移步<a href="http://www.layui.com/admin/" target="_blank">layuiAdmin</a></p>				
+								<p>这学期学习Java Web开发，把做的练习放到这里分享，第一次尝试，代码有些粗糙，如果有感兴趣的同学欢迎一起学习</p>
+                                <p>感谢<a href="https://lovetime.gitee.io/weadmin/" target="_blank">WeAdmin</a>提供前端模板</p>
+                                <p>源码开放，移步<a href="https://github.com/mdz3201/morAdmin">GitHub</a>，仅供学习</p>
+								<p>更完善的商业使用，强烈建议移步<a href="http://www.layui.com/admin/" target="_blank">layuiAdmin</a>和<a href="https://lovetime.gitee.io/weadmin/" target="_blank">WeAdmin</a></p>
 							</div>
 						</div>
 					</div>
@@ -120,12 +124,12 @@
 					<fieldset class="layui-elem-field" style="padding: 5px;">
 						<!--WeAdmin公告-->
 						<div class="layui-card">
-							<div class="layui-card-header layui-elem-quote">WeAdmin公告</div>
+							<div class="layui-card-header layui-elem-quote">morAdmin公告</div>
 							<div class="layui-card-body">
 								<div class="layui-carousel weadmin-notice" lay-filter="notice" lay-indicator="inside" lay-arrow="none" style="width: 100%; height: 280px;">
 									<div carousel-item="">
 										<div class="">
-											<a href="https://gitee.com/lovetime/WeAdmin" target="_blank" class="layui-bg-red">2018年3月28日 WeAdmin小版本更新</a>
+											<a href="https://www.daxuecheng.fun" target="_blank" class="layui-bg-red">2019年4月22日，morAdmin 1.0 上线</a>
 										</div>
 										<div class="">
 											<a href="http://www.layui.com/admin/" target="_blank" class="layui-bg-blue">首款 layui 官方后台模板系统正式发布</a>
@@ -150,6 +154,46 @@
 						<!--<legend>信息统计</legend>-->
 						<blockquote class="layui-elem-quote font16">信息统计</blockquote>
 						<div class="">
+                            <table class="layui-table">
+                                <thead>
+                                <tr>
+                                    <th colspan="2" scope="col">服务器信息</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th width="30%">服务器计算机名</th>
+                                    <td><span id="lbServerName">http://127.0.0.1/</span></td>
+                                </tr>
+                                <tr>
+                                    <td>服务器IP地址</td>
+                                    <td>47.112.119.243</td>
+                                </tr>
+                                <tr>
+                                    <td>服务器域名</td>
+                                    <td>www.daxuecheng.fun</td>
+                                </tr>
+                                <tr>
+                                    <td>服务器端口 </td>
+                                    <td>80</td>
+                                </tr>
+                                <tr>
+                                    <td>本文件所在文件夹 </td>
+                                    <td>C:\webapp\morAdmin\</td>
+                                </tr>
+                                <tr>
+                                    <td>morAdmin时间 </td>
+                                    <td>
+                                        <div id="datetime">
+                                            <script>
+                                                setInterval("document.getElementById('datetime').innerHTML=new Date().toLocaleString();", 1000);
+                                            </script>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <hr style="background: #fff 0 0 no-repeat;height: 9px;border: none;margin: 0px;padding: 0px;width: 100%;">
 							<table class="layui-table" lay-even>
 								<thead>
 									<tr>
@@ -164,80 +208,51 @@
 								<tbody>
 									<tr>
 										<td>总数</td>
-										<td>92</td>
-										<td>9</td>
-										<td>0</td>
-										<td>8</td>
-										<td>20</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
 									</tr>
 									<tr>
-										<td>今日</td>
-										<td>0</td>
-										<td>0</td>
-										<td>0</td>
-										<td>0</td>
-										<td>0</td>
+										<td>在线</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
 									</tr>
-									<tr>
-										<td>昨日</td>
-										<td>0</td>
-										<td>0</td>
-										<td>0</td>
-										<td>0</td>
-										<td>0</td>
-									</tr>
+                                    <tr>
+                                        <td>今日</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>昨日</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
 									<tr>
 										<td>本周</td>
-										<td>2</td>
-										<td>0</td>
-										<td>0</td>
-										<td>0</td>
-										<td>0</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
 									</tr>
 									<tr>
 										<td>本月</td>
-										<td>2</td>
-										<td>0</td>
-										<td>0</td>
-										<td>0</td>
-										<td>0</td>
-									</tr>
-								</tbody>
-							</table>
-							<table class="layui-table">
-								<thead>
-									<tr>
-										<th colspan="2" scope="col">服务器信息</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<th width="30%">服务器计算机名</th>
-										<td><span id="lbServerName">http://127.0.0.1/</span></td>
-									</tr>
-									<tr>
-										<td>服务器IP地址</td>
-										<td>192.168.1.1</td>
-									</tr>
-									<tr>
-										<td>服务器域名</td>
-										<td>github.com</td>
-									</tr>
-									<tr>
-										<td>服务器端口 </td>
-										<td>80</td>
-									</tr>
-									<tr>
-										<td>本文件所在文件夹 </td>
-										<td>D:\Web\WeAdmin\</td>
-									</tr>
-									<tr>
-										<td>WeAdmin时间 </td>
-										<td id="firstTime">2018-01-01 13:14:00</td>
-									</tr>
-									<tr>
-										<td>上次更新时间 </td>
-										<td id="lastTime">7210分钟</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
 									</tr>
 								</tbody>
 							</table>
@@ -249,46 +264,16 @@
 						<!--更新日志-->
 						<blockquote class="layui-elem-quote font16">发展历程&amp;更新日志</blockquote>
 						<ul class="layui-timeline" style="height: 729px; overflow-y: auto;">
-							<!--<li class="layui-timeline-item">
-								<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
-								<div class="layui-timeline-content layui-text">
-									<div class="layui-timeline-title">
-										<h3>日志初始化模板</h3>
-										<span class="layui-badge-rim">2018-01-01</span>
-									</div>
-									<p></p>
-								</div>
-							</li>-->
-							<li class="layui-timeline-item">
-								<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
-								<div class="layui-timeline-content layui-text">
-									<div class="layui-timeline-title">
-										<h3>WeAdmin小版本修复</h3>
-										<span class="layui-badge-rim">2018-03-28</span>
-									</div>
-									<ul>
-										<li>增加了文章分类添加、编辑页面</li>
-										<li>增加公用eleDel.js,个别通用页面独立加载</li>
-										<li>修复右键加载刷新后个别图表、表格页面样式错乱问题（判断加载后首次点击刷新frame子页面）</li>
-										<li>优化数据表格中表单元素点击问题</li>
-										<li>优化修复部分示例js报错</li>
-									</ul>
-								</div>
-							</li>
 							<li class="layui-timeline-item">
 								<i class="layui-icon layui-timeline-axis" style="color: #FF5722;">&#xe756;</i>
 								<div class="layui-timeline-content layui-text">
 									<div class="layui-timeline-title">
-										<h3>WeAdmin重新整理js调用方法</h3>
-										<span class="layui-badge-rim">2018-02-05</span>
+										<h3>代码更新</h3>
+										<span class="layui-badge-rim">2019-04-23</span>
 									</div>
-									<blockquote class="layui-elem-quote">使用
-										<a href="http://www.layui.com/doc/base/modules.html#extend" target="_blank">layui扩展模块</a>的方法重写了admin.js,里面包含了整个We-admin后台框架中常用的方法。</blockquote>
 									<ul>
-										<li>增加了Tab菜单栏鼠标右键刷新、关闭方法</li>
-										<li>增加了Tab菜单栏已打开菜单本地存储记录，刷新前已打开菜单不消失</li>
-										<li>增加了Tab切换监听和删除监听事件</li>
-										<li>admin.js修改为layui扩展组件加载模式 &nbsp;<i class="layui-icon" style="font-size: 16px; color: #FF5722;">&#xe60c;</i></li>
+										<li>实现 管理员管理>管理员列表 页面，根据权限显示功能</li>
+										<li>增加对管理员的操作</li>
 									</ul>
 								</div>
 							</li>
@@ -296,12 +281,14 @@
 								<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
 								<div class="layui-timeline-content layui-text">
 									<div class="layui-timeline-title">
-										<h3>增加echarts定制使用实例</h3>
-										<span class="layui-badge-rim">2018-02-01</span>
+										<h3>代码更新</h3>
+										<span class="layui-badge-rim">2019-04-21</span>
 									</div>
 									<ul>
-										<li>基于echarts 4.0版本实现中国地图指定省份使用不同颜色标识，指定省份显示气泡图标，
-											<a href="javascript:;">#详见左侧导航-【系统统计】-【地图DIY实例】</li>
+                                        <li>改写登录界面，增加自动登录，验证码，表单输入效果</li>
+                                        <li>增加登录和自动登录业务</li>
+                                        <li>创建数据库，详情查询文档 Database_readme.md</li>
+                                        <li>对用户提交的密码采用MD5算法进行单向加密</li>
 									</ul>
 								</div>
 							</li>
@@ -309,40 +296,35 @@
 								<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
 								<div class="layui-timeline-content layui-text">
 									<div class="layui-timeline-title">
-										<h3>WeAdmin初步规划</h3>
-										<span class="layui-badge-rim">2018-01-01</span>
+										<h3>morAdmin 1.0.0 开发版 上线</h3>
+										<span class="layui-badge-rim">2019-04-20</span>
 									</div>
-									<p>
-										layui发版以来，很多朋友贡献了layui案例,其中后台相关案例占了比较大的比例。
-										<br>恰逢最近接触使用后台开发较多，就查阅了大量后台开源框架，layui的案例layuicms/vip-admin/x-admin/jqadmin等等，甚至还有AdminLte/H-ui admin的demo.
-										<br>自己在做项目的时候，有一些特定需求，需要拓展的内容。
-										<br>项目工作告一段落的缝隙，就缝缝补补地研究layui写一下东西。
-										<br>第一次尝试，代码有些粗糙，也结合自己的理解希望能尽可能简单明了，模块完善中分享出来，希望能给需要的朋友一些参考。
-									</p>
+                                    <ul>
+                                        <li>前端框架基于Layui</li>
+                                        <li>界面显示基于WeAdmin</li>
+                                        <li>后端设计采用MVC结构</li>
+                                    </ul>
 								</div>
 							</li>
 							<li class="layui-timeline-item">
 								<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
 								<div class="layui-timeline-content layui-text">
 									<div class="layui-timeline-title">
-										<h3>WeAdmin立项</h3>
-										<span class="layui-badge-rim">2018-01-01</span>
+										<h3>morAdmin立项</h3>
+										<span class="layui-badge-rim">2019-04-18</span>
 									</div>
-
+                                    <p>
+                                        一次 siift+del 让我心有余悸，以后要把代码多备份几份，还是放线上更安全
+                                    </p>
 								</div>
 							</li>
 						</ul>
 					</fieldset>
 				</div>
 			</div>
-			<div style="clear: both;overflow: hidden; margin-top: 10px;">
-				<blockquote class="layui-elem-quote">感谢Layui,百度Echarts,jquery,及
-					<a href="http://fly.layui.com/case/2018/" target="_blank">LayUI相关案例</a>
-				</blockquote>
-			</div>
 		</div>
 	</body>
-	<script type="text/javascript" src="../layui-v2.4.5/layui/layui.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../../layui-v2.4.5/layui/layui.js" charset="utf-8"></script>
 	<script type="text/javascript">
 		layui.extend({
 			admin: '{/}../js/admin',

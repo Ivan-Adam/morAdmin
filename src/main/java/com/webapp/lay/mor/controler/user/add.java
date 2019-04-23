@@ -1,4 +1,4 @@
-package com.webapp.lay.mor.controler;
+package com.webapp.lay.mor.controler.user;
 
 import com.webapp.lay.mor.entity.User;
 import com.webapp.lay.mor.service.UserService;
@@ -11,16 +11,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/main")
-public class MainServlet extends HttpServlet {
+@WebServlet("/user/add")
+public class add extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Object obj = request.getSession().getAttribute("user");
         boolean flag = false;
         if(obj!=null){
             flag = true;
-            request.getSession().setAttribute("welcome","你好，");
-            request.getRequestDispatcher("./WEB-INF/views/index.jsp").forward(request,response);
+            request.getRequestDispatcher("../WEB-INF/views/user/add.jsp").forward(request,response);
             return;
         }
         Cookie[] cookies = request.getCookies();
@@ -44,11 +43,10 @@ public class MainServlet extends HttpServlet {
                         onlineCount++;
                         request.getServletContext().setAttribute("onlineCount",onlineCount);//存到application
                         request.getServletContext().setAttribute("onlineUsers",onlineUsers);//存到application
-                        request.getSession().setAttribute("welcome","你好，");
-                        request.getRequestDispatcher("./WEB-INF/views/index.jsp").forward(request,response);
+                        request.getRequestDispatcher("../WEB-INF/views/user/add.jsp").forward(request,response);
                     }else {
                         //提示找不到用户
-                        response.sendRedirect("login");
+                        response.sendRedirect("../login");
                         return;
                     }
                     return;
@@ -56,7 +54,7 @@ public class MainServlet extends HttpServlet {
             }
         }
         if(!flag){
-            response.sendRedirect("login");
+            response.sendRedirect("../login");
         }
     }
 

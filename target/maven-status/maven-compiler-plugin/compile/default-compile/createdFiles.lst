@@ -1,5 +1,8 @@
+com\webapp\lay\mor\controler\user\add.class
 com\webapp\lay\mor\dao\IUserDao.class
 com\webapp\lay\mor\entity\User.class
+com\webapp\lay\mor\controler\WelcomeControler.class
+com\webapp\lay\mor\controler\user\ListControler.class
 com\webapp\lay\mor\dao\IBC.class
 com\webapp\lay\mor\dao\impl\BC.class
 com\webapp\lay\mor\service\UserService.class
