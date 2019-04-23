@@ -10,7 +10,7 @@ public class UserService {
     private IUserDao userDao = new UserDao();
     public User login(String loginName, String loginPwd){
         User user = userDao.findByLoginName(loginName);
-        if(user!=null){
+        if(user!=null){//
             if(!user.getLoginPwd().equals(loginPwd)){
                 user = null;
             }

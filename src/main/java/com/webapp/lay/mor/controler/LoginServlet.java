@@ -18,9 +18,14 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Cookie[] cookies = request.getCookies();
         Object obj = request.getSession().getAttribute("user");
         boolean flag = false;
+        if(obj!=null){
+            flag = true;
+            response.sendRedirect("main");
+            return;
+        }
+        Cookie[] cookies = request.getCookies();
         if(cookies!=null){//如果本地cookie有自动登录信息，并且能在数据库中找到用户，则自动登录
             for(Cookie cookie:cookies){
                 if("loginInfo".equals(cookie.getName())){
@@ -43,15 +48,13 @@ public class LoginServlet extends HttpServlet {
                         request.getServletContext().setAttribute("onlineUsers",onlineUsers);//存到application
                         response.sendRedirect("main");
                     }else {
+                        //提示找不到用户
                         request.getRequestDispatcher("./WEB-INF/views/login.jsp").forward(request,response);
+                        return;
                     }
                     return;
                 }
             }
-        }
-        if(obj!=null){
-            flag = true;
-            response.sendRedirect("main");
         }
         if(!flag){
             request.getRequestDispatcher("./WEB-INF/views/login.jsp").forward(request,response);

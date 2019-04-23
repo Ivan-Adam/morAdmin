@@ -4,7 +4,7 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>角色管理-WeAdmin Frame型后台管理系统-WeAdmin 1.0</title>
+		<title>会员列表-WeAdmin Frame型后台管理系统-WeAdmin 1.0</title>
 		<meta name="renderer" content="webkit">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -21,16 +21,20 @@
 		<div class="weadmin-nav">
 			<span class="layui-breadcrumb">
         <a href="">首页</a>
-        <a href="">管理员管理</a>
+        <a href="">会员管理</a>
         <a>
-          <cite>角色管理</cite></a>
+          <cite>会员列表</cite></a>
       </span>
 			<a class="layui-btn layui-btn-sm" style="line-height:1.6em;margin-top:3px;float:right" href="javascript:location.replace(location.href);" title="刷新">
-				<i class="layui-icon" style="line-height:30px">ဂ</i></a>
+				<i class="layui-icon" style="line-height:30px">&#x1002;</i></a>
+		</div>
+		<div id="testText">
+			zheli是文字
 		</div>
 		<div class="weadmin-body">
 			<div class="layui-row">
 				<form class="layui-form layui-col-md12 we-search">
+					会员搜索：
 					<div class="layui-inline">
 						<input class="layui-input" placeholder="开始日" name="start" id="start">
 					</div>
@@ -45,39 +49,77 @@
 			</div>
 			<div class="weadmin-block">
 				<button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>
-				<button class="layui-btn" onclick="WeAdminShow('添加用户','./add.jspjsp')"><i class="layui-icon"></i>添加</button>
+				<button class="layui-btn" onclick="WeAdminShow('添加用户','./add.html',600,400)"><i class="layui-icon"></i>添加</button>
 				<span class="fr" style="line-height:40px">共有数据：88 条</span>
 			</div>
-			<table class="layui-table">
+			<table class="layui-table" id="memberList">
 				<thead>
 					<tr>
 						<th>
 							<div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>
 						</th>
 						<th>ID</th>
-						<th>角色名</th>
-						<th>拥有权限规则</th>
-						<th>描述</th>
+						<th>用户名</th>
+						<th>性别</th>
+						<th>手机</th>
+						<th>邮箱</th>
+						<th>地址</th>
+						<th>加入时间</th>
 						<th>状态</th>
 						<th>操作</th>
+					</tr>
 				</thead>
 				<tbody>
-					<tr>
+					<tr data-id="1">
 						<td>
-							<div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+							<div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id="1"><i class="layui-icon">&#xe605;</i></div>
 						</td>
 						<td>1</td>
-						<td>超级管理员</td>
-						<td>会员列表，问题列表</td>
-						<td>具有至高无上的权利</td>
+						<td>小张</td>
+						<td>男</td>
+						<td>17600000000</td>
+						<td>admin@mail.com</td>
+						<td>北京市 海淀区</td>
+						<td>2017-01-01 11:11:42</td>
 						<td class="td-status">
 							<span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span></td>
 						<td class="td-manage">
 							<a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
 								<i class="layui-icon">&#xe601;</i>
 							</a>
-							<a title="编辑" onclick="WeAdminShow('编辑','./role-add.jspjsp')" href="javascript:;">
+							<a title="编辑" onclick="WeAdminEdit('编辑','./edit.html', 1, 600, 400)" href="javascript:;">
 								<i class="layui-icon">&#xe642;</i>
+							</a>
+							<a onclick="WeAdminShow('修改密码','./password.html',600,400)" title="修改密码" href="javascript:;">
+								<i class="layui-icon">&#xe631;</i>
+							</a>
+							<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+								<i class="layui-icon">&#xe640;</i>
+							</a>
+						</td>
+					</tr>
+					<tr data-id="2">
+						<td>
+							<div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+						</td>
+						<td>2</td>
+						<td>小明</td>
+						<td>女</td>
+						<td>13000000000</td>
+						<td>admin@mail.com</td>
+						<td>北京市 海淀区</td>
+						<td>2017-01-01 11:11:42</td>
+						<td class="td-status">
+							<span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span></td>
+						<td class="td-manage">
+							<a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
+								<i class="layui-icon">&#xe601;</i>
+							</a>
+							<a title="编辑" onclick="WeAdminEdit('编辑','./edit.html', 2, 600, 400)" href="javascript:;">
+								<i class="layui-icon">&#xe642;</i>
+							</a>
+							<a onclick="WeAdminShow('修改密码','./password.html',600,400)" title="修改密码" href="javascript:;">
+								<i class="layui-icon">&#xe631;</i>
 							</a>
 							<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
 								<i class="layui-icon">&#xe640;</i>
@@ -97,8 +139,9 @@
 				</div>
 			</div>
 		</div>
-		<script src="../../lib/layui/layui.js" charset="utf-8"></script>
-		<script src="../../static/js/eleDel.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>-->
+		<script src="../../../layui-v2.4.5/layui/layui.js" charset="utf-8"></script>
+		<script src="../../js/eleDel.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 
 </html>

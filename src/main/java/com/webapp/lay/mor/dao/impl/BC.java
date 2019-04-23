@@ -20,7 +20,7 @@ public class BC implements IBC {
     @Override
     public void setConn() {
         try {
-            conn=DriverManager.getConnection("jdbc:mysql://47.112.119.243:3306/morAdmin?useUnicode=true&characterEncoding=UTF-8","root","root");
+            conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/morAdmin?useUnicode=true&characterEncoding=UTF-8","root","root");
             System.out.println("数据库已连接");
         }catch(SQLException e) {
             System.out.println("数据库连接失败");

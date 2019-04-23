@@ -1,17 +1,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set value="${pageContext.request.contextPath}" var="basePath" scope="page"/>
 <!DOCTYPE html>
 <html>
 
 	<head>
 		<meta charset="UTF-8">
-		<title>管理员列表 - morAdmin 1.0</title>
+		<title>角色管理-WeAdmin Frame型后台管理系统-WeAdmin 1.0</title>
 		<meta name="renderer" content="webkit">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
-		<link rel="stylesheet" href="../../static/css/font.css">
-		<link rel="stylesheet" href="../../static/css/weadmin.css">
+		<link rel="stylesheet" href="../../css/font.css">
+		<link rel="stylesheet" href="../../css/weadmin.css">
 		<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
 		<!--[if lt IE 9]>
 	      <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
@@ -25,7 +23,7 @@
         <a href="">首页</a>
         <a href="">管理员管理</a>
         <a>
-          <cite>管理员列表</cite></a>
+          <cite>角色管理</cite></a>
       </span>
 			<a class="layui-btn layui-btn-sm" style="line-height:1.6em;margin-top:3px;float:right" href="javascript:location.replace(location.href);" title="刷新">
 				<i class="layui-icon" style="line-height:30px">ဂ</i></a>
@@ -47,7 +45,7 @@
 			</div>
 			<div class="weadmin-block">
 				<button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>
-				<button class="layui-btn" onclick="WeAdminShow('添加用户','./add.jsp')"><i class="layui-icon"></i>添加</button>
+				<button class="layui-btn" onclick="WeAdminShow('添加用户','./add.jspjsp')"><i class="layui-icon"></i>添加</button>
 				<span class="fr" style="line-height:40px">共有数据：88 条</span>
 			</div>
 			<table class="layui-table">
@@ -56,13 +54,10 @@
 						<th>
 							<div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>
 						</th>
-						<th>头像</th>
-						<th>账号</th>
-						<th>用户名</th>
-                        <th>性别</th>
-						<th>手机</th>
-						<th>邮箱</th>
-						<th>加入时间</th>
+						<th>ID</th>
+						<th>角色名</th>
+						<th>拥有权限规则</th>
+						<th>描述</th>
 						<th>状态</th>
 						<th>操作</th>
 				</thead>
@@ -71,26 +66,17 @@
 						<td>
 							<div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
 						</td>
-						<td><img src="${sessionScope.user.userFace}" class="layui-nav-img"></td>
-						<td>${sessionScope.user.loginName}</td>
-						<td>${sessionScope.user.userName}</td>
-                        <td>
-                            <c:choose>
-                                <c:when test="${sessionScope.user.sex == '1'}">男</c:when>
-                                <c:when test="${sessionScope.user.sex == '2'}">女</c:when>
-                                <c:otherwise>未知</c:otherwise>
-                            </c:choose>
-                        </td>
-						<td>${sessionScope.user.phone}</td>
-						<td>${sessionScope.user.mail}</td>
-						<td>${sessionScope.user.joinTime}</td>
+						<td>1</td>
+						<td>超级管理员</td>
+						<td>会员列表，问题列表</td>
+						<td>具有至高无上的权利</td>
 						<td class="td-status">
 							<span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span></td>
 						<td class="td-manage">
 							<a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
 								<i class="layui-icon">&#xe601;</i>
 							</a>
-							<a title="编辑" onclick="WeAdminShow('编辑','./edit.html')" href="javascript:;">
+							<a title="编辑" onclick="WeAdminShow('编辑','./role-add.jspjsp')" href="javascript:;">
 								<i class="layui-icon">&#xe642;</i>
 							</a>
 							<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
@@ -111,8 +97,8 @@
 				</div>
 			</div>
 		</div>
-		<script src="../../layui-v2.4.5/layui/layui.js" charset="utf-8"></script>
-    	<script src="../../js/eleDel.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../lib/layui/layui.js" charset="utf-8"></script>
+		<script src="../../../static/js/eleDel.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 
 </html>
