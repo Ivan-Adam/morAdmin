@@ -11,19 +11,19 @@
 
 |------------userName varchar(20) not null
 
-|------------sex int not null
+|------------sex varchar(6) not null
 
 |------------joinTime datetime not null
 
-|------------userFace varchar(64) not null
+|------------userFace varchar(128) not null
 
-|------------prim int not null
+|------------prim varchar(6) not null
 
 |------------phone varchar(11) not null
 
 |------------mail varchar(20) not null
 
-|------------onUse int not null
+|------------onUse varchar(6) not null
 
 +------------------------------
 
