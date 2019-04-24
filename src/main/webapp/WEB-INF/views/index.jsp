@@ -58,7 +58,10 @@
                     <a onclick="WeAdminShow('个人信息','http://www.baidu.com')">个人信息</a>
                 </dd>
                 <dd>
-                    <a onclick="WeAdminShow('切换帐号','./login.html')">切换帐号</a>
+                    <a onclick="WeAdminShow('更换头像','${basePath}/user/upFace')">更换头像</a>
+                </dd>
+                <dd>
+                    <a class="loginout" href="login.html">切换帐号</a>
                 </dd>
                 <dd>
                     <a class="loginout" href="login.html">退出</a>

@@ -24,4 +24,7 @@ public class UserService {
     public List<User> findAll(){
         return userDao.find(null);
     }
+
+    public boolean addUser(User user){return userDao.add(user);}
+    public boolean upFace(String loginName,String fileName){return userDao.upFace(loginName,fileName);}
 }
