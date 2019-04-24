@@ -262,7 +262,7 @@
 				<div class="layui-col-lg6 layui-col-md12">
 					<fieldset class="layui-elem-field we-changelog" style="padding: 5px;">
 						<!--更新日志-->
-						<blockquote class="layui-elem-quote font16">发展历程&amp;更新日志</blockquote>
+						<blockquote class="layui-elem-quote font16">开发日志&amp;新功能</blockquote>
 						<ul class="layui-timeline" style="height: 729px; overflow-y: auto;">
 							<li class="layui-timeline-item">
 								<i class="layui-icon layui-timeline-axis" style="color: #FF5722;">&#xe756;</i>
@@ -273,7 +273,8 @@
 									</div>
 									<ul>
 										<li>实现 管理员管理>管理员列表 页面，根据权限显示功能</li>
-										<li>增加对管理员的操作</li>
+										<li>增加对管理员的添加操作</li>
+										<li>增加右上角更换头像功能</li>
 									</ul>
 								</div>
 							</li>
