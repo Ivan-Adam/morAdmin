@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="${basePath}/static/css/font.css">
 		<link rel="stylesheet" href="${basePath}/static/css/weadmin.css">
       <link rel="stylesheet" href="${basePath}/layui-v2.4.5/layui/css/layui.css">
+      <script src="${basePath}/static/js/HashEncrypt.js"></script>
     <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
     <!--[if lt IE 9]>
       <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
@@ -21,9 +22,8 @@
   
   <body>
 
-
     <div class="weadmin-body">
-        <form class="layui-form" action="/user/add" method="post">
+        <form class="layui-form" action="/user/add" method="post" onsubmit="return md5()">
           <div class="layui-form-item">
               <label for="loginName" class="layui-form-label">
                   <span class="we-red">*</span>账号
@@ -47,9 +47,11 @@
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label"><span class="we-red">*</span>性别</label>
-                <div class="layui-input-block">
-                    <input type="radio" value="1" lay-skin="primary" title="男" checked="checked">
-                    <input type="radio" value="2" lay-skin="primary" title="女">
+                <div class="layui-input-block" style="width: 100px">
+                    <select name="sex">
+                        <option value="1">男</option>
+                        <option value="2">女</option>
+                    </select>
                 </div>
             </div>
           <div class="layui-form-item">
@@ -74,18 +76,8 @@
               </div>
           </div>
             <div class="layui-form-item">
-                <label class="layui-form-label">
-
-                </label>
-                <div class="layui-upload">
-                    <button type="button" class="layui-btn" id="test1">
-                        <i class="layui-icon">&#xe67c;</i>上传头像
-                    </button>
-                </div>
-            </div>
-            <div class="layui-form-item">
               <label class="layui-form-label"><span class="we-red">*</span>角色</label>
-              <div class="layui-input-block">
+              <div class="layui-input-block" style="width: 200px">
                   <select name="prim" id="">
                       <option value="1">超级管理员</option>
                       <option value="2">管理员</option>
@@ -97,81 +89,33 @@
                   <span class="we-red">*</span>密码
               </label>
               <div class="layui-input-inline">
-                  <input type="password" id="loginPwd" name="loginPwd" required="" lay-verify="pass"
-                  autocomplete="off" class="layui-input">
+                  <input type="password" placeholder="请输入登录密码" autocomplete="off" id="loginPwd" class="layui-input" lay-verify="required">
+                  <input type="hidden" name="loginPwd" id="md5_pwd">
               </div>
               <div class="layui-form-mid layui-word-aux">
                   <span class="we-red">*</span>6到16个字符
               </div>
           </div>
           <div class="layui-form-item">
-              <label for="L_repass" class="layui-form-label">
-                  <span class="we-red">*</span>确认密码
-              </label>
-              <div class="layui-input-inline">
-                  <input type="password" id="L_repass" name="repass" required="" lay-verify="repass"
-                  autocomplete="off" class="layui-input">
-              </div>
-          </div>
-          <div class="layui-form-item">
-              <label for="L_repass" class="layui-form-label"></label>
-              <button  class="layui-btn" lay-filter="add" lay-submit="">增加</button>
+              <label class="layui-form-label"></label>
+              <button type="submit"  class="layui-btn">增加</button>
           </div>
       </form>
     </div>
 		<script src="${basePath}/layui-v2.4.5/layui/layui.js" charset="utf-8"></script>
     <script type="text/javascript">
-    		layui.extend({
-					admin: '{/}../../static/js/admin'
-				});
-        layui.use(['form','layer','admin'], function(){
-          var form = layui.form,
-          	admin = layui.admin,
-          	layer = layui.layer;
-          //自定义验证规则
-          form.verify({
-            nikename: function(value){
-              if(value.length < 5){
-                return '昵称至少得5个字符啊';
-              }
-            }
-            ,pass: [/(.+){6,12}$/, '密码必须6到12位']
-            ,repass: function(value){
-                if($('#loginPwd').val()!=$('#L_repass').val()){
-                    return '两次密码不一致';
-                }
-            }
-          });
 
-          //监听提交
-          form.on('submit(add)', function(data){
-            console.log(data);
-            //发异步，把数据提交给php
-            layer.alert("增加成功", {icon: 6},function () {
-                // 获得frame索引
-                var index = parent.layer.getFrameIndex(window.name);
-                //关闭当前frame
-                parent.layer.close(index);
-            });
-            return false;
-          });
+        function md5(){
+            var loginPwd= document.getElementById('loginPwd');
+            var md5_pwd=document.getElementById('md5_pwd');
+            md5_pwd.value = HashEncrypt.MD5(loginPwd.value,false,false);
+            return true;
+        }
+        //Demo
+        layui.use('form', function(){
+            var form = layui.form;
+
         });
-
-            layui.use('upload', function(){
-                var upload = layui.upload;
-
-                //执行实例
-                var uploadInst = upload.render({
-                    elem: '#test1' //绑定元素
-                    ,url: '/file' //上传接口
-                    ,done: function(res){
-                        //上传完毕回调
-                    }
-                    ,error: function(){
-                        //请求异常回调
-                    }
-                });
-            });
     </script>
   </body>
 

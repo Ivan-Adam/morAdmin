@@ -1,7 +1,7 @@
 package com.webapp.lay.mor.entity;
 
-import java.awt.*;
-import java.sql.Blob;
+
+
 import java.util.Date;
 
 public class User {
@@ -9,16 +9,17 @@ public class User {
     private String loginPwd;
     private String userName;
     private String userFace;
-    private int sex;
+    private String sex;
     private Date joinTime;
     private String phone;
     private String mail;
-    private int prim;
+    private String prim;
+    private String onUse;
 
     public User() {
     }
 
-    public User(String loginName, String loginPwd, String userName, String userFace, int sex, Date joinTime, String phone, String mail, int prim) {
+    public User(String loginName, String loginPwd, String userName, String userFace, String sex, Date joinTime, String phone, String mail, String prim, String onUse) {
         this.loginName = loginName;
         this.loginPwd = loginPwd;
         this.userName = userName;
@@ -28,6 +29,7 @@ public class User {
         this.phone = phone;
         this.mail = mail;
         this.prim = prim;
+        this.onUse = onUse;
     }
 
     public String getLoginName() {
@@ -62,11 +64,11 @@ public class User {
         this.userFace = userFace;
     }
 
-    public int getSex() {
+    public String getSex() {
         return sex;
     }
 
-    public void setSex(int sex) {
+    public void setSex(String sex) {
         this.sex = sex;
     }
 
@@ -94,11 +96,19 @@ public class User {
         this.mail = mail;
     }
 
-    public int getPrim() {
+    public String getPrim() {
         return prim;
     }
 
-    public void setPrim(int prim) {
+    public void setPrim(String prim) {
         this.prim = prim;
+    }
+
+    public String getOnUse() {
+        return onUse;
+    }
+
+    public void setOnUse(String onUse) {
+        this.onUse = onUse;
     }
 }

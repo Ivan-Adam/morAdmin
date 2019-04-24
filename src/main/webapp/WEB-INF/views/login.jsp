@@ -106,8 +106,6 @@
             time: 2000,
         });
     }
-</script>
-<script>
     //Demo
     layui.use('form', function(){
         var form = layui.form;

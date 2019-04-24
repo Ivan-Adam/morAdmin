@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @WebServlet("/user/add")
 public class add extends HttpServlet {
@@ -60,6 +62,21 @@ public class add extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request,response);
+        User user = new User();
+        user.setLoginName(request.getParameter("loginName"));
+        user.setLoginPwd(request.getParameter("loginPwd"));
+        user.setUserName(request.getParameter("userName"));
+        user.setUserFace("userFace/001.jpg");
+        user.setSex(request.getParameter("sex"));
+        user.setJoinTime(new Date());
+        user.setMail(request.getParameter("mail"));
+        user.setPhone(request.getParameter("phone"));
+        user.setPrim(request.getParameter("prim"));
+        user.setOnUse("1");
+        UserService service = new UserService();
+        if(service.addUser(user)){
+            request.setAttribute("user",user);
+            request.getRequestDispatcher("../WEB-INF/views/index.jsp").forward(request,response);
+        }
     }
 }

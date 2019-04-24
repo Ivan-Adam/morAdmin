@@ -11,4 +11,5 @@ public interface IUserDao {
     User findByLoginName(String loginName);
     User findById(Integer id);
     List<User> findWithPage(User user,int page,int pageSize);
+    boolean upFace(String loginName, String fileName);
 }
