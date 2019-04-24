@@ -1,7 +1,7 @@
 ## 数据库版本
 5.5.24
 
-+----morAdmin
++----**********
 
 |--------user
 
@@ -13,7 +13,7 @@
 
 |------------sex varchar(6) not null
 
-|------------joinTime datetime not null
+|------------joinTime date not null
 
 |------------userFace varchar(128) not null
 
