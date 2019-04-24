@@ -15,7 +15,7 @@
 
 |------------joinTime date not null
 
-|------------userFace varchar(128) not null
+|------------userFace varchar(256) not null
 
 |------------prim varchar(6) not null
 
