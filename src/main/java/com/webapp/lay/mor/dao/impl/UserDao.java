@@ -61,6 +61,7 @@ public class UserDao implements IUserDao {
             while (BC.rs.next()) {
                 User user1 = new User();
                 user1.setLoginName(BC.rs.getString("loginName"));
+                user.setLoginPwd(BC.rs.getString("loginPwd"));
                 user1.setUserName(BC.rs.getString("userName"));
                 user1.setSex(BC.rs.getString("sex"));
                 user1.setJoinTime(BC.rs.getDate("joinTime"));
@@ -91,6 +92,7 @@ public class UserDao implements IUserDao {
             BC.rs = BC.pstmt.executeQuery();
             if (BC.rs.next()) {
                 user.setLoginName(BC.rs.getString("loginName"));
+                user.setLoginPwd(BC.rs.getString("loginPwd"));
                 user.setUserName(BC.rs.getString("userName"));
                 user.setSex(BC.rs.getString("sex"));
                 user.setJoinTime(BC.rs.getDate("joinTime"));
