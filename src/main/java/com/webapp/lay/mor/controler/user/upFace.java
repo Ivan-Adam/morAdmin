@@ -23,7 +23,13 @@ public class upFace extends HttpServlet {
         super();
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("../WEB-INF/views/user/upFace.jsp").forward(request,response);
+        Object obj = request.getSession().getAttribute("user");
+        if(obj!=null){
+            request.getRequestDispatcher("../WEB-INF/views/user/upFace.jsp").forward(request,response);
+            return;
+        }else {
+            response.sendRedirect("../main");
+        }
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //获得一个文件上传的工厂类
@@ -65,7 +71,7 @@ public class upFace extends HttpServlet {
                         UserService service = new UserService();
                        User user=(User)request.getSession().getAttribute("user");
                         if(service.upFace(user.getLoginName(),fileName)){
-                            user=service.autoLogin(user.getLoginName());
+                            user=service.login(user.getLoginName(),user.getLoginPwd());
                             request.getSession().setAttribute("user",user);
                             response.sendRedirect("../main");
                         }

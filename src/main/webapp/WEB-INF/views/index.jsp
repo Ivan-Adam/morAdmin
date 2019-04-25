@@ -26,106 +26,129 @@
 <!-- 顶部开始 -->
 <div class="container">
     <div class="logo">
-        <a href="./index.jsp">morAdmin 1.0</a>
+        <a href="/main">morAdmin 1.0</a>
     </div>
-    <div class="left_open">
-        <i title="展开左侧栏" class="iconfont">&#xe699;</i>
-    </div>
+    <c:if test="${sessionScope.user != null}">
+        <div class="left_open">
+            <i title="展开左侧栏" class="iconfont">&#xe699;</i>
+        </div>
+    </c:if>
     <ul class="layui-nav left fast-add" lay-filter="">
         <li class="layui-nav-item">
-            <a href="javascript:;">+新增</a>
+            <a href="javascript:;">联系作者</a>
             <dl class="layui-nav-child">
                 <!-- 二级菜单 -->
                 <dd>
-                    <a onclick="WeAdminShow('资讯','https://www.youfa365.com/')"><i class="iconfont">&#xe6a2;</i>资讯</a>
+                    <a onclick="WeAdminShow('来啊，快活啊','https://github.com/mdz3201')"><i class="iconfont">&#xe6a2;</i>GitHub</a>
                 </dd>
                 <dd>
-                    <a onclick="WeAdminShow('图片','http://www.baidu.com')"><i class="iconfont">&#xe6a8;</i>图片</a>
+                    <a href="javascript:wechat()"><i class="iconfont">&#xe6a8;</i>微信</a>
                 </dd>
                 <dd>
-                    <a onclick="WeAdminShow('用户','https://www.youfa365.com/')"><i class="iconfont">&#xe6b8;</i>用户</a>
+                    <a href="javascript:qq()"><i class="iconfont">&#xe6b8;</i>QQ</a>
                 </dd>
             </dl>
         </li>
     </ul>
     <ul class="layui-nav right" lay-filter="">
-        <li class="layui-nav-item">
-            <a href="javascript:;"><img src="${basePath}/static/${sessionScope.user.userFace}" class="layui-nav-img">${sessionScope.user.userName}</a>
+        <c:choose>
+        <c:when test="${sessionScope.user == null}">
+            <li class="layui-nav-item">
+                <a href="/login">请登录</a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:register()">没有账号？</a>
+            </li>
+        </c:when>
+        <c:otherwise>
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="${basePath}/static/${sessionScope.user.userFace}" class="layui-nav-img">
+                        ${sessionScope.user.userName}
+                </a>
 
-            <dl class="layui-nav-child">
-                <!-- 二级菜单 -->
-                <dd>
-                    <a onclick="WeAdminShow('个人信息','http://www.baidu.com')">个人信息</a>
-                </dd>
-                <dd>
-                    <a onclick="WeAdminShow('更换头像','${basePath}/user/upFace')">更换头像</a>
-                </dd>
-                <dd>
-                    <a class="loginout" href="login.html">切换帐号</a>
-                </dd>
-                <dd>
-                    <a class="loginout" href="login.html">退出</a>
-                </dd>
-            </dl>
-        </li>
-        <li class="layui-nav-item to-index">
-            <a href="/">前台首页</a>
-        </li>
+                <dl class="layui-nav-child">
+                    <!-- 二级菜单 -->
+                    <dd>
+                        <a onclick="WeAdminShow('个人信息','http://www.baidu.com')">个人信息</a>
+                    </dd>
+                    <dd>
+                        <a onclick="WeAdminShow('更换头像','${basePath}/user/upFace')">更换头像</a>
+                    </dd>
+                    <dd>
+                        <a class="loginout" href="login.html">切换帐号</a>
+                    </dd>
+                    <dd>
+                        <a class="loginout" href="/logout">退出</a>
+                    </dd>
+                </dl>
+            </li>
+        </c:otherwise>
+        </c:choose>
     </ul>
 </div>
 <!-- 顶部结束 -->
 <!-- 中部开始 -->
 <!-- 左侧菜单开始 -->
-<div class="left-nav">
-    <div id="side-nav">
-        <ul id="nav">
-            <li>
-                <a href="javascript:;">
-                    <i class="iconfont">&#xe6b8;</i>
-                    <cite>会员管理</cite>
-                    <i class="iconfont nav_right">&#xe697;</i>
-                </a>
-                <ul class="sub-menu">
-                    <li>
-                        <a _href="/user/list">
-                            <i class="iconfont">&#xe6a7;</i>
-                            <cite>会员列表</cite>
-                        </a>
-                    </li>
-                    <li>
-                        <a _href="./pages/member/del.jsp">
-                            <i class="iconfont">&#xe6a7;</i>
-                            <cite>会员删除</cite>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="javascript:;">
-                    <i class="iconfont">&#xe726;</i>
-                    <cite>管理员管理</cite>
-                    <i class="iconfont nav_right">&#xe697;</i>
-                </a>
-                <ul class="sub-menu">
-                    <li>
-                        <a _href="/user/list">
-                            <i class="iconfont">&#xe6a7;</i>
-                            <cite>管理员列表</cite>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
+    <div class="left-nav" style="left: -221px;">
+        <div id="side-nav">
+            <ul id="nav">
+                <li>
+                    <a href="javascript:;">
+                        <i class="iconfont">&#xe6b8;</i>
+                        <cite>会员管理</cite>
+                        <i class="iconfont nav_right">&#xe697;</i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a _href="/user/list">
+                                <i class="iconfont">&#xe6a7;</i>
+                                <cite>会员列表</cite>
+                            </a>
+                        </li>
+                        <li>
+                            <a _href="./pages/member/del.jsp">
+                                <i class="iconfont">&#xe6a7;</i>
+                                <cite>会员删除</cite>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <i class="iconfont">&#xe726;</i>
+                        <cite>管理员管理</cite>
+                        <i class="iconfont nav_right">&#xe697;</i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a _href="/user/list">
+                                <i class="iconfont">&#xe6a7;</i>
+                                <cite>管理员列表</cite>
+                            </a>
+                        </li>
+                        <li>
+                            <a _href="/user/onlineList">
+                                <i class="iconfont">&#xe6a7;</i>
+                                <cite>在线管理员</cite>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
-</div>
+
 <!-- <div class="x-slide_left"></div> -->
 <!-- 左侧菜单结束 -->
 <!-- 右侧主体开始 -->
-<div class="page-content">
+<div class="page-content" style="left: 0;">
     <div class="layui-tab tab" lay-filter="wenav_tab" id="WeTabTip" lay-allowclose="true">
-        <ul class="layui-tab-title" id="tabName">
-            <li>我的桌面</li>
-        </ul>
+        <c:if test="${sessionScope.user != null}">
+            <ul class="layui-tab-title" id="tabName">
+                <li>我的桌面</li>
+            </ul>
+        </c:if>
         <div class="layui-tab-content">
             <div class="layui-tab-item layui-show">
                 <iframe src='/welcome' frameborder="0" scrolling="yes" class="weIframe"></iframe>
@@ -171,7 +194,39 @@
     //         }
     //     });
     // });
-
+    function register() {
+        layer.msg('别闹，你见过哪个后台可以注册的？<br>找管理员要账号去', {
+            time: 3000,
+        });
+    }
+    function qq() {
+        layer.open({
+            type: 1
+            ,title: false //不显示标题栏
+            ,closeBtn: false
+            ,area: '300px;'
+            ,shade: 0.8
+            ,id: 'qq_qq' //设定一个id，防止重复弹出
+            ,btn: [ '残忍拒绝']
+            ,btnAlign: 'c'
+            ,moveType: 1 //拖拽模式，0或者1
+            ,content: '<div style="padding: 30px; text-align: center; background-color: #393D49; "><img src="${basePath}/static/qq.jpg" alt="" style="width: 150px;height: 200px"></div>'
+        });
+    }
+    function wechat() {
+        layer.open({
+            type: 1
+            ,title: false //不显示标题栏
+            ,closeBtn: false
+            ,area: '300px;'
+            ,shade: 0.8
+            ,id: 'qq_qq' //设定一个id，防止重复弹出
+            ,btn: [ '残忍拒绝']
+            ,btnAlign: 'c'
+            ,moveType: 1 //拖拽模式，0或者1
+            ,content: '<div style="padding: 30px; text-align: center; background-color: #393D49; "><img src="${basePath}/static/wechat.jpg" alt="" style="width: 150px;height: 150px"></div>'
+        });
+    }
 </script>
 </body>
 <!--Tab菜单右键弹出菜单-->

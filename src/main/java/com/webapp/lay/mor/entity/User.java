@@ -2,9 +2,13 @@ package com.webapp.lay.mor.entity;
 
 
 
+import javax.servlet.http.HttpSessionBindingEvent;
+import javax.servlet.http.HttpSessionBindingListener;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
-public class User {
+public class User implements HttpSessionBindingListener {
     private String loginName;
     private String loginPwd;
     private String userName;
@@ -110,5 +114,33 @@ public class User {
 
     public void setOnUse(String onUse) {
         this.onUse = onUse;
+    }
+
+    @Override
+    public void valueBound(HttpSessionBindingEvent httpSessionBindingEvent) {
+        List<User> onlineUsers = (List<User>)httpSessionBindingEvent.getSession().getServletContext().getAttribute("onlineUsers");
+        if(onlineUsers == null){
+            onlineUsers = new ArrayList<User>();
+        }
+        onlineUsers.add((User) httpSessionBindingEvent.getSession().getAttribute("user"));
+        httpSessionBindingEvent.getSession().getServletContext().setAttribute("onlineUsers",onlineUsers);
+
+        Integer onlineCount = (Integer)httpSessionBindingEvent.getSession().getServletContext().getAttribute("onlineCount");
+        if(onlineCount==null){
+            onlineCount=0;
+        }
+        onlineCount++;
+        httpSessionBindingEvent.getSession().getServletContext().setAttribute("onlineCount",onlineCount);
+    }
+
+    @Override
+    public void valueUnbound(HttpSessionBindingEvent httpSessionBindingEvent) {
+        List<User> onlineUsers = (List<User>)httpSessionBindingEvent.getSession().getServletContext().getAttribute("onlineUsers");
+        onlineUsers.remove((User) httpSessionBindingEvent.getSession().getAttribute("user"));
+        httpSessionBindingEvent.getSession().getServletContext().setAttribute("onlineUsers",onlineUsers);
+
+        Integer onlineCount = (Integer)httpSessionBindingEvent.getSession().getServletContext().getAttribute("onlineCount");
+        onlineCount--;
+        httpSessionBindingEvent.getSession().getServletContext().setAttribute("onlineCount",onlineCount);
     }
 }

@@ -64,7 +64,6 @@
             <div class="layui-form-item">
                 <div class="layui-input-block" style="display: inline-block;margin-left: 10px;width: 100%">
                     <input type="checkbox" lay-skin="switch" value="1" name="remember"><span style="margin-top: 8px;margin-left: 5px;display: inline-block;vertical-align: middle">记住我</span>
-                    <a href="javascript:register()"><span style="float: right;margin-top: 8px;display: inline-block;vertical-align: middle;margin-right: 20px">没有账号？</span></a>
                 </div>
             </div>
             <div class="layui-form-item">
@@ -100,11 +99,6 @@
     function reloadCode() {
         var time = new Date().getTime();
         document.getElementById("imageCode").src="captche?d="+time;
-    }
-    function register() {
-        layer.msg('别闹，让神仙给你注册一个去', {
-            time: 2000,
-        });
     }
     //Demo
     layui.use('form', function(){

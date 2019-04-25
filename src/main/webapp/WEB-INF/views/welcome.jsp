@@ -109,8 +109,8 @@
 							<div class="layui-card-body layui-text weadmin-text">
 								<p>这学期学习Java Web开发，把做的练习放到这里分享，第一次尝试，代码有些粗糙，如果有感兴趣的同学欢迎一起学习</p>
                                 <p>感谢<a href="https://lovetime.gitee.io/weadmin/" target="_blank">WeAdmin</a>提供前端模板</p>
-                                <p>源码开放，移步<a href="https://github.com/mdz3201/morAdmin">GitHub</a>，仅供学习</p>
-								<p>更完善的商业使用，强烈建议移步<a href="http://www.layui.com/admin/" target="_blank">layuiAdmin</a>和<a href="https://lovetime.gitee.io/weadmin/" target="_blank">WeAdmin</a></p>
+                                <p>源码开放，下载请移步<a href="https://github.com/mdz3201/morAdmin">GitHub</a>，仅供学习</p>
+								<p>更完善的商业使用，强烈建议移步<a href="http://www.layui.com/admin/" target="_blank">layuiAdmin</a>、<a href="https://lovetime.gitee.io/weadmin/" target="_blank">WeAdmin</a>，并联系本站作者</p>
 							</div>
 						</div>
 					</div>
@@ -200,7 +200,7 @@
 										<th>统计</th>
 										<th>资讯库</th>
 										<th>图片库</th>
-										<th>产品库</th>
+										<th>访问量</th>
 										<th>用户</th>
 										<th>管理员</th>
 									</tr>
@@ -265,6 +265,19 @@
 						<blockquote class="layui-elem-quote font16">开发日志&amp;新功能</blockquote>
 						<ul class="layui-timeline" style="height: 729px; overflow-y: auto;">
 							<li class="layui-timeline-item">
+								<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+								<div class="layui-timeline-content layui-text">
+									<div class="layui-timeline-title">
+										<h3>代码更新</h3>
+										<span class="layui-badge-rim">2019-04-25</span>
+									</div>
+									<ul>
+										<li>用Filter重写自动登录业务，并实现统一全站编码</li>
+                                        <li>实现退出功能，展示在线管理员人数及列表</li>
+									</ul>
+								</div>
+							</li>
+							<li class="layui-timeline-item">
 								<i class="layui-icon layui-timeline-axis" style="color: #FF5722;">&#xe756;</i>
 								<div class="layui-timeline-content layui-text">
 									<div class="layui-timeline-title">
@@ -303,7 +316,7 @@
                                     <ul>
                                         <li>前端框架基于Layui</li>
                                         <li>界面显示基于WeAdmin</li>
-                                        <li>后端设计采用MVC结构</li>
+                                        <li>后端设计采用MVC模式</li>
                                     </ul>
 								</div>
 							</li>
