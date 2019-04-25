@@ -73,9 +73,10 @@ public class LoginServlet extends HttpServlet {
         String remember = request.getParameter("remember");
 
         //用Session读取验证码
-        String saveCode = "";
-        saveCode = (String) request.getSession().getAttribute("code");
-
+        String saveCode = (String) request.getSession().getAttribute("code");
+        if(saveCode==null){
+            saveCode = "";
+        }
         String onlineUsers = (String) request.getServletContext().getAttribute("onlineUsers");
         if(onlineUsers!=null){
             if(onlineUsers.indexOf(loginName)>=0){
