@@ -13,7 +13,7 @@
 
 |------------sex varchar(6) not null
 
-|------------joinTime date not null
+|------------joinTime datetime not null
 
 |------------userFace varchar(256) not null
 
