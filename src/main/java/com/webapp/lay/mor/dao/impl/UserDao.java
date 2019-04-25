@@ -61,7 +61,7 @@ public class UserDao implements IUserDao {
             while (BC.rs.next()) {
                 User user1 = new User();
                 user1.setLoginName(BC.rs.getString("loginName"));
-                user.setLoginPwd(BC.rs.getString("loginPwd"));
+                user1.setLoginPwd(BC.rs.getString("loginPwd"));
                 user1.setUserName(BC.rs.getString("userName"));
                 user1.setSex(BC.rs.getString("sex"));
                 user1.setJoinTime(BC.rs.getDate("joinTime"));
