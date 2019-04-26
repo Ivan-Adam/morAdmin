@@ -1,4 +1,4 @@
-package com.webapp.lay.mor.controler;
+package com.webapp.lay.mor.controler.filter;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;

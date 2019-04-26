@@ -118,29 +118,11 @@ public class User implements HttpSessionBindingListener {
 
     @Override
     public void valueBound(HttpSessionBindingEvent httpSessionBindingEvent) {
-        List<User> onlineUsers = (List<User>)httpSessionBindingEvent.getSession().getServletContext().getAttribute("onlineUsers");
-        if(onlineUsers == null){
-            onlineUsers = new ArrayList<User>();
-        }
-        onlineUsers.add((User) httpSessionBindingEvent.getSession().getAttribute("user"));
-        httpSessionBindingEvent.getSession().getServletContext().setAttribute("onlineUsers",onlineUsers);
 
-        Integer onlineCount = (Integer)httpSessionBindingEvent.getSession().getServletContext().getAttribute("onlineCount");
-        if(onlineCount==null){
-            onlineCount=0;
-        }
-        onlineCount++;
-        httpSessionBindingEvent.getSession().getServletContext().setAttribute("onlineCount",onlineCount);
     }
 
     @Override
     public void valueUnbound(HttpSessionBindingEvent httpSessionBindingEvent) {
-        List<User> onlineUsers = (List<User>)httpSessionBindingEvent.getSession().getServletContext().getAttribute("onlineUsers");
-        onlineUsers.remove((User) httpSessionBindingEvent.getSession().getAttribute("user"));
-        httpSessionBindingEvent.getSession().getServletContext().setAttribute("onlineUsers",onlineUsers);
 
-        Integer onlineCount = (Integer)httpSessionBindingEvent.getSession().getServletContext().getAttribute("onlineCount");
-        onlineCount--;
-        httpSessionBindingEvent.getSession().getServletContext().setAttribute("onlineCount",onlineCount);
     }
 }

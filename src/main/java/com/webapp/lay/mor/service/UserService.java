@@ -13,7 +13,7 @@ public class UserService {
         if(user==null){
             return user;
         }
-        if(user!=null){//
+        if(user!=null){
             if(!user.getLoginPwd().equals(loginPwd)){
                 user = null;
             }

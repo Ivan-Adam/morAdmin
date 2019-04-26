@@ -70,13 +70,10 @@
                 <dl class="layui-nav-child">
                     <!-- 二级菜单 -->
                     <dd>
-                        <a onclick="WeAdminShow('个人信息','http://www.baidu.com')">个人信息</a>
+                        <a onclick="WeAdminShow('个人信息','${basePath}/user/userInfo')">个人信息</a>
                     </dd>
                     <dd>
                         <a onclick="WeAdminShow('更换头像','${basePath}/user/upFace')">更换头像</a>
-                    </dd>
-                    <dd>
-                        <a class="loginout" href="login.html">切换帐号</a>
                     </dd>
                     <dd>
                         <a class="loginout" href="/logout">退出</a>
@@ -96,20 +93,14 @@
                 <li>
                     <a href="javascript:;">
                         <i class="iconfont">&#xe6b8;</i>
-                        <cite>会员管理</cite>
+                        <cite>用户管理</cite>
                         <i class="iconfont nav_right">&#xe697;</i>
                     </a>
                     <ul class="sub-menu">
                         <li>
-                            <a _href="/user/list">
+                            <a _href="/member/visitor">
                                 <i class="iconfont">&#xe6a7;</i>
-                                <cite>会员列表</cite>
-                            </a>
-                        </li>
-                        <li>
-                            <a _href="./pages/member/del.jsp">
-                                <i class="iconfont">&#xe6a7;</i>
-                                <cite>会员删除</cite>
+                                <cite>实时访客</cite>
                             </a>
                         </li>
                     </ul>
@@ -146,7 +137,7 @@
     <div class="layui-tab tab" lay-filter="wenav_tab" id="WeTabTip" lay-allowclose="true">
         <c:if test="${sessionScope.user != null}">
             <ul class="layui-tab-title" id="tabName">
-                <li>我的桌面</li>
+                <li>首页</li>
             </ul>
         </c:if>
         <div class="layui-tab-content">

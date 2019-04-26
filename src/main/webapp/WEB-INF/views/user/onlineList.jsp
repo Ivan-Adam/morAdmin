@@ -28,10 +28,10 @@
 	<body>
 		<div class="weadmin-nav">
 			<span class="layui-breadcrumb">
-        <a href="">首页</a>
-        <a href="">在线管理员</a>
+        <a>首页</a>
+        <a>管理员管理</a>
         <a>
-          <cite>管理员列表</cite></a>
+          <cite>在线管理员</cite></a>
       </span>
 			<a class="layui-btn layui-btn-sm" style="line-height:1.6em;margin-top:3px;float:right" href="javascript:location.replace(location.href);" title="刷新">
 				<i class="layui-icon" style="line-height:30px">ဂ</i></a>

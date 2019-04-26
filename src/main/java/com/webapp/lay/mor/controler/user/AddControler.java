@@ -14,7 +14,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @WebServlet("/user/add")
-public class add extends HttpServlet {
+public class AddControler extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Object obj = request.getSession().getAttribute("user");
