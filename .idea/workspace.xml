@@ -2,38 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b439b8d3-b0bb-446b-b2bd-39b6fe634358" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/AutoLoginFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/CharacterFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/LogoutServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/OnlineListControler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/onlineList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/listener/MyHttpSessionListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/listener/MyServletRequestListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/member/VisitorControler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/UserInfoControler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/entity/Visitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/util/SessionUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/visitor.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/userInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/AutoLoginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/filter/AutoLoginFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/CharacterFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/filter/CharacterFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/MainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/MainServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/WelcomeControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/WelcomeControler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/ListControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/ListControler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/add.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/add.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/upFace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/upFace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/LogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/LogoutServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/OnlineListControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/OnlineListControler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/add.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/AddControler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/upFace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/UpFaceControler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/onlineList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/onlineList.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcome.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/controler/AutoLoginFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/controler/CharacterFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/controler/CharacterRequset.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/controler/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/controler/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/controler/MainServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/controler/MainServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/controler/WelcomeControler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/controler/WelcomeControler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/controler/user/ListControler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/controler/user/ListControler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/controler/user/add.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/controler/user/add.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/controler/user/upFace.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/controler/user/upFace.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/controler/LogoutServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/controler/LogoutServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/controler/user/OnlineListControler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/controler/user/OnlineListControler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/controler/user/add.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/controler/user/upFace.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/index_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/index_jsp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/index_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/index_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/login_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/login_jsp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/login_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/login_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/user/list_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/user/list_jsp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/user/list_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/user/list_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/user/onlineList_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/user/onlineList_jsp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/user/onlineList_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/user/onlineList_jsp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/welcome_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/welcome_jsp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/welcome_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/welcome_jsp.java" afterDir="false" />
     </list>
@@ -141,71 +154,93 @@
     <session id="146581355">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.closed" value="11" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.11" value="2" />
+          <entry key="project.open.time.11" value="3" />
           <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="18" />
+          <entry key="css" value="19" />
           <entry key="html" value="32" />
-          <entry key="java" value="135" />
+          <entry key="java" value="196" />
           <entry key="jpg" value="1" />
           <entry key="js" value="36" />
-          <entry key="jsp" value="99" />
+          <entry key="jsp" value="112" />
           <entry key="main" value="2" />
           <entry key="md" value="6" />
           <entry key="svg" value="1" />
-          <entry key="xml" value="18" />
+          <entry key="xml" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="18" />
+          <entry key="CSS" value="19" />
           <entry key="HTML" value="32" />
           <entry key="Image" value="1" />
-          <entry key="JAVA" value="135" />
-          <entry key="JSP" value="99" />
+          <entry key="JAVA" value="196" />
+          <entry key="JSP" value="112" />
           <entry key="JavaScript" value="36" />
           <entry key="Markdown" value="6" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="SVG" value="1" />
-          <entry key="XML" value="18" />
+          <entry key="XML" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="124" />
+          <entry key="dummy" value="30" />
           <entry key="html" value="9" />
-          <entry key="java" value="4121" />
+          <entry key="java" value="4886" />
           <entry key="js" value="47" />
-          <entry key="jsp" value="4254" />
+          <entry key="jsp" value="4558" />
           <entry key="md" value="26" />
-          <entry key="xml" value="132" />
+          <entry key="xml" value="216" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="124" />
           <entry key="HTML" value="10" />
-          <entry key="JAVA" value="4121" />
-          <entry key="JSP" value="4253" />
+          <entry key="JAVA" value="4886" />
+          <entry key="JSP" value="4557" />
           <entry key="JavaScript" value="47" />
           <entry key="Markdown" value="26" />
-          <entry key="XML" value="132" />
+          <entry key="PLAIN_TEXT" value="30" />
+          <entry key="XML" value="216" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcome.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="276" column="64" selection-start-line="276" selection-start-column="64" selection-end-line="276" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/userInfo.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="532">
+              <caret line="37" column="49" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -213,8 +248,8 @@
         <option value="CSS File" />
         <option value="Interface" />
         <option value="JavaScript File" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -254,19 +289,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/member/list.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/member/del.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/member/del.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/eleDel.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/member/list.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/servlets/LoginServlet.java" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/js/login.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/welcome.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/admin/list.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/user/list.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/entity/Stu.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/stu/StuControler.java" />
@@ -275,7 +297,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/static/js/admin.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/js/eleDel.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/css/login.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/list.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/FileUtil.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/add_old.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/_add.jsp" />
@@ -290,21 +311,35 @@
         <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/add.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/ListControler.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/test.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/js/weadmin.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/css/weadmin.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/upFace.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/CharacterFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/OnlineListControler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/LoginServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/onlineList.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/AutoLoginFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/entity/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/CharacterFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/listener/MySessionListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/filter/AutoLoginFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/LogoutServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/LoginServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/entity/Visitor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/entity/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/listener/MyHttpRequestListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/util/SessionUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/listener/MyHttpSessionListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/listener/MyServletRequestListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/OnlineListControler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/member/Visitor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/member/VisitorServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/list.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/onlineList.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/visitor.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/UserInfoControler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/AddControler.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcome.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/userInfo.jsp" />
       </list>
     </option>
   </component>
@@ -333,9 +368,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="943" />
-    <option name="width" value="985" />
-    <option name="height" value="1098" />
+    <option name="x" value="-9" />
+    <option name="width" value="977" />
+    <option name="height" value="1090" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -345,8 +380,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -397,7 +430,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="mor" type="462c0819:PsiDirectoryNode" />
               <item name="controler" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="morAdmin" type="b2602c69:ProjectViewProjectNode" />
@@ -407,7 +440,27 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="mor" type="462c0819:PsiDirectoryNode" />
               <item name="controler" type="462c0819:PsiDirectoryNode" />
-              <item name="CharacterFilter.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+              <item name="listener" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="morAdmin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="morAdmin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="mor" type="462c0819:PsiDirectoryNode" />
+              <item name="controler" type="462c0819:PsiDirectoryNode" />
+              <item name="member" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="morAdmin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="morAdmin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="mor" type="462c0819:PsiDirectoryNode" />
+              <item name="controler" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="morAdmin" type="b2602c69:ProjectViewProjectNode" />
@@ -417,15 +470,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="mor" type="462c0819:PsiDirectoryNode" />
               <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="morAdmin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="morAdmin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mor" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="morAdmin" type="b2602c69:ProjectViewProjectNode" />
@@ -457,24 +501,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="morAdmin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="morAdmin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="morAdmin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="morAdmin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -485,6 +511,16 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="morAdmin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="morAdmin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="member" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="morAdmin" type="b2602c69:ProjectViewProjectNode" />
@@ -504,6 +540,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -511,34 +549,34 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/GitHub/morAdmin/src/main/java/com/webapp/lay/mor/dao/impl/BC.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556211430601" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556264389325" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\GitHub\morAdmin\src\main\webapp\WEB-INF\views\member" />
+      <recent name="E:\GitHub\morAdmin\src\main\webapp\WEB-INF\views\user" />
+      <recent name="E:\GitHub\morAdmin\src\main\webapp\js" />
+      <recent name="E:\GitHub\morAdmin\src\main\webapp" />
+      <recent name="E:\GitHub\morAdmin\src\main\webapp\layui-v2.4.5\layui" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.webapp.lay.mor.util" />
+      <recent name="com.webapp.lay.mor.controler.listener" />
+      <recent name="com.webapp.lay.mor.controler.user" />
+      <recent name="com.webapp.lay.mor.entity" />
+      <recent name="com.webapp.lay.dao.impl" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\GitHub\morAdmin\src\main\webapp\WEB-INF\views" />
       <recent name="E:\GitHub\morAdmin\src\main\webapp\WEB-INF\views\user" />
       <recent name="E:\GitHub\morAdmin\src\main\webapp\pages\admin" />
       <recent name="E:\GitHub\morAdmin\src\main\webapp\pages" />
       <recent name="E:\GitHub\morAdmin\src\main\webapp\static\css" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.webapp.lay.mor.controler.user" />
-      <recent name="com.webapp.lay.mor.entity" />
-      <recent name="com.webapp.lay.dao.impl" />
-      <recent name="com.webapp.lay.dao" />
-      <recent name="com.webapp.lay.entity" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\GitHub\morAdmin\src\main\webapp\WEB-INF\views\user" />
-      <recent name="E:\GitHub\morAdmin\src\main\webapp\js" />
-      <recent name="E:\GitHub\morAdmin\src\main\webapp" />
-      <recent name="E:\GitHub\morAdmin\src\main\webapp\layui-v2.4.5\layui" />
-      <recent name="E:\GitHub\morAdmin\src\main\webapp\static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -603,16 +641,20 @@
       <workItem from="1556115741723" duration="1425000" />
       <workItem from="1556159912078" duration="2025000" />
       <workItem from="1556177599948" duration="27502000" />
+      <workItem from="1556211478776" duration="95000" />
+      <workItem from="1556235949612" duration="17239000" />
+      <workItem from="1556265134543" duration="750000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143601000" />
+    <option name="totallyTimeSpent" value="161685000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1563" height="886" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49604744" visible="true" weight="0.20531562" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49604744" visible="true" weight="0.14418605" />
       <window_info id="Structure" order="1" sideWeight="0.50395256" side_tool="true" weight="0.16744186" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -623,7 +665,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32934928" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32005313" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997344" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -643,38 +685,6 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49802372" visible="true" weight="0.24916944" />
-      <window_info id="Structure" order="1" sideWeight="0.5019763" side_tool="true" weight="0.25315616" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32934928" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32802126" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50033224" side_tool="true" weight="0.32802126" />
-      <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.49966776" weight="0.32891247" />
-      <window_info anchor="bottom" id="Java Enterprise" order="10" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.32956812" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -683,69 +693,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="228">
-            <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Database_readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SECOND">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="51" column="73" selection-start-line="51" selection-start-column="73" selection-end-line="51" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/user/list.jsp" />
-    <entry file="file://$PROJECT_DIR$/../morAdmin_4_22/src/main/java/com/webapp/lay/mor/controler/stu/StuControler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="25" column="53" selection-start-line="25" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../morAdmin_4_22/src/main/webapp/WEB-INF/views/stu/test.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="38" column="45" lean-forward="true" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../morAdmin_4_22/src/main/java/com/webapp/lay/mor/entity/Stu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/layui-v2.4.5/layui/layui.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/layui-v2.4.5/layui/layui.all.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js1/extends/tabmenu.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js1/admin.js" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/admin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -834,27 +781,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/main">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/MainServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="18" column="92" lean-forward="true" selection-start-line="18" selection-start-column="92" selection-end-line="18" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/CaptcheServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="51" column="31" lean-forward="true" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/add.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-413">
@@ -862,41 +788,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/test.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="65" column="189" selection-start-line="65" selection-start-column="189" selection-end-line="65" selection-end-column="189" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/css/weadmin.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="319" column="1" lean-forward="true" selection-start-line="319" selection-start-column="1" selection-end-line="319" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/test.jsp" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/weadmin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="281">
           <caret line="66" column="27" lean-forward="true" selection-start-line="66" selection-start-column="27" selection-end-line="66" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/upFace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="72" column="54" lean-forward="true" selection-start-line="72" selection-start-column="54" selection-end-line="72" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -907,45 +803,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="132" column="40" selection-start-line="132" selection-start-column="40" selection-end-line="132" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/OnlineListControler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="20" column="71" selection-start-line="20" selection-start-column="71" selection-end-line="20" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="91" column="28" selection-start-line="91" selection-start-column="28" selection-end-line="91" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/onlineList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="97" column="49" lean-forward="true" selection-start-line="97" selection-start-column="49" selection-end-line="97" selection-end-column="49" />
+        <state relative-caret-position="-754">
+          <caret line="29" column="6" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="209">
+          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/filter/CharacterFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/CaptcheServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="51" column="31" lean-forward="true" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -956,27 +841,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/LoginServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/LogoutServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/CharacterFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="87">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/AutoLoginFilter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/filter/AutoLoginFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="344">
+          <caret line="65" column="9" lean-forward="true" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/listener/MyHttpRequestListener.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/listener/MyServletRequestListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/listener/MyHttpSessionListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/util/SessionUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="49" lean-forward="true" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -990,30 +899,141 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/entity/User.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/OnlineListControler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="137" column="8" lean-forward="true" selection-start-line="137" selection-start-column="8" selection-end-line="137" selection-end-column="31" />
+        <state relative-caret-position="171">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="34" column="10" lean-forward="true" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/css/weadmin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/onlineList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/list.jsp" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/entity/Visitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/visitor.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="40" column="102" selection-start-line="40" selection-start-column="102" selection-end-line="40" selection-end-column="102" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/member/VisitorControler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="20" column="9" selection-start-line="14" selection-start-column="8" selection-end-line="20" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/MainServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/LoginServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="26" column="15" lean-forward="true" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/AddControler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/UpFaceControler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="27" column="103" lean-forward="true" selection-start-line="27" selection-start-column="103" selection-end-line="27" selection-end-column="103" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/UserInfoControler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="74" column="24" lean-forward="true" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="116" column="39" lean-forward="true" selection-start-line="112" selection-start-column="27" selection-end-line="116" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcome.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="275" column="63" selection-start-line="275" selection-start-column="63" selection-end-line="275" selection-end-column="63" />
+        <state relative-caret-position="247">
+          <caret line="276" column="64" selection-start-line="276" selection-start-column="64" selection-end-line="276" selection-end-column="64" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/LogoutServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="27" column="35" lean-forward="true" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+        <state relative-caret-position="689">
+          <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/userInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="37" column="49" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
         </state>
       </provider>
     </entry>

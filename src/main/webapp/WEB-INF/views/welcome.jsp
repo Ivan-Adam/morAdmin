@@ -194,15 +194,15 @@
                                 </tbody>
                             </table>
                             <hr style="background: #fff 0 0 no-repeat;height: 9px;border: none;margin: 0px;padding: 0px;width: 100%;">
-							<table class="layui-table" lay-even>
+							<table class="layui-table" lay-even style="text-align: center">
 								<thead>
-									<tr>
-										<th>统计</th>
-										<th>资讯库</th>
-										<th>图片库</th>
-										<th>访问量</th>
-										<th>用户</th>
-										<th>管理员</th>
+									<tr style="text-align: center">
+										<th style="text-align: center">统计</th>
+										<th style="text-align: center">资讯库</th>
+										<th style="text-align: center">图片库</th>
+										<th style="text-align: center">访问量</th>
+										<th style="text-align: center">用户</th>
+										<th style="text-align: center">管理员</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -218,9 +218,9 @@
 										<td>在线</td>
 										<td></td>
 										<td></td>
+										<td>${applicationScope.visitorNumber}</td>
 										<td></td>
-										<td></td>
-										<td></td>
+										<td>${applicationScope.onlineCount}</td>
 									</tr>
                                     <tr>
                                         <td>今日</td>
@@ -273,7 +273,8 @@
 									</div>
 									<ul>
 										<li>用Filter重写自动登录业务，并实现统一全站编码</li>
-                                        <li>实现退出功能，展示在线管理员人数及列表</li>
+                                        <li>实现退出功能</li>
+										<li>用Listener监听在线用户及实时访客</li>
 									</ul>
 								</div>
 							</li>

@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet("/login")
@@ -67,7 +68,19 @@ public class LoginServlet extends HttpServlet {
                     response.addCookie(cookie);
                 }
                 request.getSession().setAttribute("user",user);
-                response.sendRedirect("main");
+                if(onlineUsers == null){
+                    onlineUsers = new ArrayList<User>();
+                }
+                onlineUsers.add((User) request.getSession().getAttribute("user"));
+                request.getSession().getServletContext().setAttribute("onlineUsers",onlineUsers);
+
+                Integer onlineCount = (Integer)request.getSession().getServletContext().getAttribute("onlineCount");
+                if(onlineCount==null){
+                    onlineCount=0;
+                }
+                onlineCount++;
+                request.getSession().getServletContext().setAttribute("onlineCount",onlineCount);
+                response.sendRedirect("/main");
             }else {
                 request.setAttribute("errerMsg","用户名或密码错误");
                 request.getRequestDispatcher("./WEB-INF/views/login.jsp").forward(request,response);

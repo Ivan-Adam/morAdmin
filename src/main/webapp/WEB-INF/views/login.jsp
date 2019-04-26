@@ -28,18 +28,6 @@
     </style>
 </head>
 <body>
-<script type="text/javascript">
-    function test() {
-        layer.msg('别闹，让神仙给你注册一个去', {
-            time: 2000,
-        });
-    }
-    test();
-    var func = function() {
-        alert("你好，程序员");
-    };
-    func();
-</script>
     <div class="login">
         <div class="message">morAdmin 1.0 - 管理员登录</div>
         <div id="dark"></div>
