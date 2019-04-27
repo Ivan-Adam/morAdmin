@@ -21,7 +21,7 @@ public class AddControler extends HttpServlet {
         if(obj!=null){
             request.getRequestDispatcher("../WEB-INF/views/user/add.jsp").forward(request,response);
             return;
-        }else {
+        }else {//怎么让他跳出层显示
             response.sendRedirect("../main");
         }
     }
@@ -36,12 +36,12 @@ public class AddControler extends HttpServlet {
         user.setSex(request.getParameter("sex"));
         user.setJoinTime(new Date());
         user.setMail(request.getParameter("mail"));
-        user.setPhone(request.getParameter("phone"));
+        user.setPhone(request.getParameter("phone").substring(0,10));//还没有手机号检验业务，截取十一位以防数据库错误
         user.setPrim(request.getParameter("prim"));
         user.setOnUse("1");
         UserService service = new UserService();
         if(service.addUser(user)){
-            request.setAttribute("user",user);
+            //完了给你提示添加成功，关闭页面，而不是跳转
             request.getRequestDispatcher("../WEB-INF/views/index.jsp").forward(request,response);
         }
     }

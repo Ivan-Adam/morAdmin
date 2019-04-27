@@ -50,7 +50,7 @@ public class LoginServlet extends HttpServlet {
                 if(user.getLoginName().equals(loginName)){
                     request.setAttribute("errerMsg","用户已在别处登录");
                     request.getRequestDispatcher("./WEB-INF/views/login.jsp").forward(request,response);
-                    break;
+                    return;
                 }
             }
         }
@@ -71,7 +71,7 @@ public class LoginServlet extends HttpServlet {
                 if(onlineUsers == null){
                     onlineUsers = new ArrayList<User>();
                 }
-                onlineUsers.add((User) request.getSession().getAttribute("user"));
+                onlineUsers.add(user);
                 request.getSession().getServletContext().setAttribute("onlineUsers",onlineUsers);
 
                 Integer onlineCount = (Integer)request.getSession().getServletContext().getAttribute("onlineCount");

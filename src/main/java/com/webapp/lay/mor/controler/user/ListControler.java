@@ -17,10 +17,10 @@ public class ListControler extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Object obj = request.getSession().getAttribute("user");
-        UserService service = new UserService();
         if(obj!=null){
+            UserService service = new UserService();
             List<User> users = service.findAll();
-            request.setAttribute("users",users);
+            request.setAttribute("users",users);//findAll找出来的是给它存到request域好还是Application域
             request.getRequestDispatcher("../WEB-INF/views/user/list.jsp").forward(request,response);
             return;
         }else {

@@ -53,11 +53,11 @@
 			</div>
 			<div class="weadmin-block">
                 <c:choose>
-                    <c:when test="${user.prim == '1'}">
+                    <c:when test="${sessionScope.user.prim == '1'}">
                         <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>
                         <button class="layui-btn" onclick="WeAdminShow('添加用户','/user/add')"><i class="layui-icon"></i>添加</button>
                     </c:when>
-                    <c:when test="${user.prim == '2'}">
+                    <c:when test="${sessionScope.user.prim == '2'}">
                         <button class="layui-btn layui-btn-danger"  style="background-color: #999999"><i class="layui-icon"></i>批量删除</button>
                         <button class="layui-btn"  style="background-color: #999999"><i class="layui-icon"></i>添加</button>
                     </c:when>
