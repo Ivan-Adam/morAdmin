@@ -3,46 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b439b8d3-b0bb-446b-b2bd-39b6fe634358" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/LoginServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/filter/AutoLoginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/filter/AutoLoginFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/listener/MyHttpSessionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/listener/MyHttpSessionListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/listener/MyServletRequestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/listener/MyServletRequestListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/AddControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/AddControler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/ListControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/ListControler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/add.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/addInput.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/del.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/password.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/cate.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/onlineList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/onlineList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/role-add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/role.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/rule.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/controler/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/controler/LoginServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/controler/filter/AutoLoginFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/controler/filter/AutoLoginFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/controler/listener/MyHttpSessionListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/webapp/lay/mor/controler/listener/MyHttpSessionListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/index_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/index_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/login_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/login_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/member/visitor_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/member/visitor_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/user/add_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/user/add_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/user/list_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/user/list_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/user/onlineList_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/user/onlineList_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/user/upFace_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/user/upFace_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/user/userInfo_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/user/userInfo_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/welcome_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/welcome_jsp.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -148,23 +110,23 @@
     <session id="146581355">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
+          <entry key="project.closed" value="15" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="3" />
           <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.2" value="3" />
-          <entry key="project.open.time.8" value="1" />
+          <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="15" />
+          <entry key="project.opened" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="19" />
           <entry key="html" value="32" />
-          <entry key="java" value="228" />
+          <entry key="java" value="234" />
           <entry key="jpg" value="1" />
           <entry key="js" value="36" />
           <entry key="jsp" value="127" />
@@ -179,7 +141,7 @@
           <entry key="CSS" value="19" />
           <entry key="HTML" value="32" />
           <entry key="Image" value="1" />
-          <entry key="JAVA" value="228" />
+          <entry key="JAVA" value="234" />
           <entry key="JSP" value="127" />
           <entry key="JavaScript" value="36" />
           <entry key="Markdown" value="6" />
@@ -193,7 +155,7 @@
           <entry key="css" value="124" />
           <entry key="dummy" value="30" />
           <entry key="html" value="9" />
-          <entry key="java" value="5527" />
+          <entry key="java" value="5631" />
           <entry key="js" value="47" />
           <entry key="jsp" value="4566" />
           <entry key="md" value="26" />
@@ -204,7 +166,7 @@
         <counts>
           <entry key="CSS" value="124" />
           <entry key="HTML" value="10" />
-          <entry key="JAVA" value="5527" />
+          <entry key="JAVA" value="5631" />
           <entry key="JSP" value="4565" />
           <entry key="JavaScript" value="47" />
           <entry key="Markdown" value="26" />
@@ -215,7 +177,20 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/listener/MyHttpSessionListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="47" column="34" lean-forward="true" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -307,14 +282,14 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/userInfo.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/LoginServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/filter/AutoLoginFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/filter/CharacterFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/listener/MyServletRequestListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/listener/MyHttpSessionListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/AddControler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/user/ListControler.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/list.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/onlineList.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/filter/AutoLoginFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/listener/MyServletRequestListener.java" />
       </list>
     </option>
   </component>
@@ -343,9 +318,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="width" value="977" />
-    <option name="height" value="1090" />
+    <option name="x" value="-12" />
+    <option name="width" value="980" />
+    <option name="height" value="1093" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -406,6 +381,16 @@
               <item name="mor" type="462c0819:PsiDirectoryNode" />
               <item name="controler" type="462c0819:PsiDirectoryNode" />
               <item name="filter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="morAdmin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="morAdmin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="mor" type="462c0819:PsiDirectoryNode" />
+              <item name="controler" type="462c0819:PsiDirectoryNode" />
+              <item name="listener" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="morAdmin" type="b2602c69:ProjectViewProjectNode" />
@@ -479,8 +464,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -488,8 +473,8 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/GitHub/morAdmin/src/main/java/com/webapp/lay/mor/dao/impl/BC.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556350443916" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/54fcf4d40001f77100000000/SessionManager" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556375874529" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -584,17 +569,19 @@
       <workItem from="1556235949612" duration="17239000" />
       <workItem from="1556265134543" duration="775000" />
       <workItem from="1556280419031" duration="4845000" />
-      <workItem from="1556343646481" duration="7783000" />
+      <workItem from="1556343646481" duration="13734000" />
+      <workItem from="1556419116972" duration="1271000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174338000" />
+    <option name="totallyTimeSpent" value="181560000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1563" height="886" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49604744" visible="true" weight="0.24385382" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49604744" visible="true" weight="0.24717608" />
       <window_info id="Structure" order="1" sideWeight="0.50395256" side_tool="true" weight="0.16744186" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -604,7 +591,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32934928" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="1.0" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36387783" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997344" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -763,17 +750,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="689">
           <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/cate.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-570" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/cate.jsp" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/upFace.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -823,9 +803,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
           <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -833,36 +810,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-203">
           <caret line="54" column="13" lean-forward="true" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/listener/MyHttpSessionListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="34" column="65" lean-forward="true" selection-start-line="34" selection-start-column="65" selection-end-line="34" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/listener/MyServletRequestListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/filter/AutoLoginFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-399">
-          <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -964,16 +911,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/member/VisitorControler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="16" column="105" lean-forward="true" selection-start-line="16" selection-start-column="105" selection-end-line="16" selection-end-column="105" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/visitor.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-70">
@@ -985,6 +922,43 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
           <caret line="25" column="15" lean-forward="true" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/filter/AutoLoginFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="61" column="28" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/member/VisitorControler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="16" column="105" lean-forward="true" selection-start-line="16" selection-start-column="105" selection-end-line="16" selection-end-column="105" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/listener/MyServletRequestListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="42" column="103" lean-forward="true" selection-start-line="42" selection-start-column="103" selection-end-line="42" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webapp/lay/mor/controler/listener/MyHttpSessionListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="47" column="34" lean-forward="true" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

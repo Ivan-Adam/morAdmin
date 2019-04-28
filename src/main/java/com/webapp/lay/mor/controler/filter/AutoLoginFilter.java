@@ -55,6 +55,12 @@ public class AutoLoginFilter implements Filter {
                     if(onlineUsers == null){
                         onlineUsers = new ArrayList<User>();
                     }
+                    /*
+                    * 如果再让他登录，他再记住我一下，这就会变成两个cookie
+                    * 所以还是让他登录的好
+                    * 虽然会变成两处同时登录
+                    * 暂时还是留着
+                     */
                     for(User user1:onlineUsers){
                         if(user.getLoginName().equals(user1.getLoginName())){
                             request.setAttribute("errerMsg","用户已在别处登录");
